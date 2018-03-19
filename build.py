@@ -33,7 +33,8 @@
 #   blocks_horizontal_compressed.js: The compressed Scratch horizontal blocks.
 #   blocks_vertical_compressed.js: The compressed Scratch vertical blocks.
 #   msg/js/<LANG>.js for every language <LANG> defined in msg/js/<LANG>.json.
-
+import socks
+import socket
 import sys
 if sys.version_info[0] != 2:
   raise Exception("Blockly build only compatible with Python 2.x.\n"
@@ -287,11 +288,23 @@ class Gen_compressed(threading.Thread):
   def do_compile(self, params, target_filename, filenames, remove):
     # Send the request to Google.
     headers = {"Content-type": "application/x-www-form-urlencoded"}
-    conn = httplib.HTTPSConnection("closure-compiler.appspot.com")
+
+    #socks.set_default_proxy(socks.SOCKS5, "localhost", 56666)
+    #socket.socket = socks.socksocket
+
+
+    #conn = httplib.HTTPSConnection("closure-compiler.appspot.com")
+    #conn.request("POST", "/compile", urllib.urlencode(params), headers)
+
+
+    conn = httplib.HTTPSConnection("127.0.0.1", 8118)
+    conn.set_tunnel("closure-compiler.appspot.com", 443)
     conn.request("POST", "/compile", urllib.urlencode(params), headers)
     response = conn.getresponse()
     json_str = response.read()
     conn.close()
+
+    #print(json_str)
 
     # Parse the JSON response.
     json_data = json.loads(json_str)

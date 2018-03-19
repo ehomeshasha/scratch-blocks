@@ -27,6 +27,32 @@ goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
+Blockly.Blocks['event_whenjobstartclicked'] = {
+  /**
+   * Block for when flag clicked.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "id": "event_whenjobstartclicked",
+      "message0": "when %1 clicked",
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "green-flag.svg",
+          "width": 24,
+          "height": 24,
+          "alt": "flag"
+        }
+      ],
+      "category": Blockly.Categories.event,
+      "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+
+
+
 
 Blockly.Blocks['event_whenflagclicked'] = {
   /**
