@@ -27,9 +27,22 @@ goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
+Blockly.Blocks['string_length'] = {
+  init: function() {
+    this.appendValueInput('VALUE')
+      .setCheck('String')
+      .appendField('length of');
+    this.setOutput(true, 'Number');
+    this.setColour(160);
+    this.setTooltip('Returns number of letters in the provided text.');
+    this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
+  }
+};
+
+
 Blockly.Blocks['event_whenjobstartclicked'] = {
   /**
-   * Block for when flag clicked.
+   * 编程猫的 当开始被点击按钮.
    * @this Blockly.Block
    */
   init: function() {
@@ -39,7 +52,7 @@ Blockly.Blocks['event_whenjobstartclicked'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "green-flag.svg",
+          //"src": Blockly.mainWorkspace.options.pathToMedia + "green-flag.svg",
           "width": 24,
           "height": 24,
           "alt": "flag"

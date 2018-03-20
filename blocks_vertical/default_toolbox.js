@@ -298,6 +298,8 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '<block type="sound_tempo" id="sound_tempo"></block>'+
   '</category>'+
   '<category name="Events" colour="#FFD500" secondaryColour="#CC9900">'+
+    '<block type="string_length" id="string_length"></block>'+
+    '<block type="event_whenjobstartclicked" id="event_whenjobstartclicked"></block>'+
     '<block type="event_whenflagclicked" id="event_whenflagclicked"></block>'+
     '<block type="event_whenkeypressed" id="event_whenkeypressed">'+
     '</block>'+

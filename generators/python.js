@@ -320,3 +320,15 @@ Blockly.Python.getAdjustedInt = function(block, atId, opt_delta, opt_negate) {
   }
   return at;
 };
+
+
+Blockly.JavaScript['text_indexOf'] = function(block) {
+  // Search the text for a substring.
+  var operator = block.getFieldValue('END') == 'FIRST' ? 'indexOf' : 'lastIndexOf';
+  var subString = Blockly.JavaScript.valueToCode(block, 'FIND',
+    Blockly.JavaScript.ORDER_NONE) || '\'\'';
+  var text = Blockly.JavaScript.valueToCode(block, 'VALUE',
+    Blockly.JavaScript.ORDER_MEMBER) || '\'\'';
+  var code = text + '.' + operator + '(' + subString + ')';
+  return [code, Blockly.JavaScript.ORDER_MEMBER];
+};
