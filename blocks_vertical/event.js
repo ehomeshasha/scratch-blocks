@@ -42,7 +42,7 @@ Blockly.Blocks['string_length'] = {
 
 Blockly.Blocks['event_whenjobstartclicked'] = {
   /**
-   * 编程猫的 当开始被点击按钮.
+   * 当开始被点击按钮.
    * @this Blockly.Block
    */
   init: function() {
