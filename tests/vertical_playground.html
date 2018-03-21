@@ -17,13 +17,16 @@
     <script src="../blocks_vertical/motion.js"></script>
     <script src="../blocks_vertical/looks.js"></script>
     <script src="../blocks_vertical/procedures.js"></script>
+    <script src="../blocks_vertical/python_lists.js"></script>
     <script src="../blocks_vertical/operators.js"></script>
     <script src="../blocks_vertical/pen.js"></script>
     <script src="../blocks_vertical/sound.js"></script>
     <script src="../blocks_vertical/sensing.js"></script>
     <script src="../blocks_vertical/data.js"></script>
     <script src="../blocks_vertical/extensions.js"></script>
+
     <script src="../blocks_vertical/default_toolbox.js"></script>
+    <script src="../generators/python.js"></script>
 
     <script>
       'use strict';
@@ -489,7 +492,7 @@
       &nbsp;
       <input type="button" value="Import from XML" onclick="fromXml()" id="import">
       <br>
-      <input type="button" value="To JavaScript" onclick="toCode('JavaScript')">
+      <input type="button" value="To Python" onclick="toCode('Python')">
       <br>
       <textarea id="importExport" style="width: 26%; height: 12em"
         onchange="taChange();" onkeyup="taChange()"></textarea>
