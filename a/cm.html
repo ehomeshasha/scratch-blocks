@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://ide.codemao.cn/ -->
+<html class="wf-herkules-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.blocklyDraggable {}
+.blocklySvg {
+background-color: #FFFBF1;
+outline: none;
+overflow: hidden;
+position: absolute;
+display: block;
+}
+.blocklyWidgetDiv {
+display: none;
+position: absolute;
+z-index: 99999;
+}
+.injectionDiv {
+height: 100%;
+position: relative;
+overflow: hidden;
+touch-action: none
+}
+.blocklyNonSelectable {
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+.blocklyWsDragSurface {
+display: none;
+position: absolute;
+overflow: visible;
+top: 0;
+left: 0;
+}
+.blocklyBlockDragSurface {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: visible !important;
+z-index: 50;
+}
+.blocklyTooltipDiv {
+background-color: #ffffc7;
+border: 1px solid #ddc;
+box-shadow: 4px 4px 20px 1px rgba(0,0,0,.15);
+color: #000;
+display: none;
+font-size: 9pt;
+opacity: 0.9;
+padding: 2px;
+position: absolute;
+z-index: 100000;
+}
+.blocklyResizeSE {
+cursor: se-resize;
+fill: rgba(80, 80, 80, 0.6);
+}
+.blocklyResizeSW {
+cursor: sw-resize;
+fill: #aaa;
+}
+.blocklyResizeLine {
+stroke: #555;
+stroke-width: 1;
+}
+.blocklyHighlightedConnectionPath {
+fill: none;
+stroke: #fc3;
+stroke-width: 4px;
+}
+.blocklySelected>.blocklyPath {
+stroke: #fc3;
+stroke-width: 3px;
+}
+.blocklyDraggable {
+cursor: url("https://static.codemao.cn/blockly/media/handopen.cur"), auto;
+cursor: grab;
+cursor: -webkit-grab;
+cursor: -moz-grab;
+}
+.blocklyDragging {
+cursor: url("https://static.codemao.cn/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.blocklyDraggable:active {
+cursor: url("https://static.codemao.cn/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.blocklyBlockDragSurface .blocklyDraggable {
+cursor: url("https://static.codemao.cn/blockly/media/handclosed.cur"), auto;
+cursor: grabbing;
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.blocklyDragging.blocklyDraggingDelete {
+cursor: url("https://static.codemao.cn/blockly/media/handdelete.cur"), auto;
+}
+.blocklyToolboxDelete {
+cursor: url("https://static.codemao.cn/blockly/media/handdelete.cur"), auto;
+}
+.blocklyDragging>.blocklyPath, {
+fill-opacity: .8;
+stroke-opacity: .8;
+}
+.blocklyDisabled>.blocklyPath {
+fill-opacity: .5;
+stroke-opacity: .5;
+}
+.blocklyText {
+cursor: default;
+fill: #fff;
+}
+.blocklyNonEditableText>text {
+pointer-events: none;
+}
+.blocklyNonEditableText>rect,
+.blocklyEditableText>rect {
+fill: #fff;
+fill-opacity: .6;
+}
+.blocklyNonEditableText>text,
+.blocklyEditableText>text {
+fill: #000;
+}
+.blocklyEditableText:hover>rect {
+stroke: #fff;
+stroke-width: 2;
+}
+.blocklyBubbleText {
+fill: #000;
+}
+.blocklyFlyout {
+position: absolute;
+z-index: 20;
+}
+.blocklyFlyoutButton {
+fill: #888;
+cursor: default;
+}
+.blocklyFlyoutButtonShadow {
+fill: #666;
+}
+.blocklyFlyoutButton:hover {
+fill: #aaa;
+}
+.blocklyMatrixButton {
+fill: #FFC063;
+cursor: default;
+}
+.blocklyRemoveButton {
+fill: rgba(0, 0, 0, 0.15);
+cursor: default;
+}
+.blocklyRemoveButton:hover {
+cursor: pointer;
+}
+.blocklyUploadButton {
+fill: #FFFBF0;
+stroke: #F2E7C9;
+stroke-width: 1px;
+cursor: default;
+}
+.blocklyUploadButton:hover {
+cursor: pointer;
+}
+.blocklyUploadText {
+fill: #7F725F;
+stroke: none;
+cursor: default;
+}
+.blocklyUploadText:hover {
+cursor: pointer;
+}
+.blocklyUploadOptionText {
+fill: #7F725F;
+stroke: none;
+font-size: 12px;
+cursor: default;
+}
+.blocklyLine {
+fill: #CACACA;
+cursor: default;
+}
+.blocklyDevice:hover {
+cursor: pointer;
+}
+.blocklyFlyoutLabel {
+cursor: default;
+}
+.blocklyPower {
+cursor: default;
+}
+.blocklyFlyoutLabelBackground {
+opacity: 0;
+}
+.blocklyFlyoutLabelText {
+fill: #000;
+}
+.blocklyCloudVisibilityButton:hover {
+cursor: pointer;
+}
+.blocklySvg text, .blocklyBlockDragSurface text {
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+cursor: inherit;
+}
+.blocklyHidden {
+display: none;
+}
+.blocklyFieldDropdown:not(.blocklyHidden) {
+display: block;
+}
+.blocklyIconGroup {
+cursor: default;
+}
+.blocklyIconGroup:not(:hover),
+.blocklyIconGroupReadonly {
+opacity: .6;
+}
+.blocklyIconShape {
+fill: #00f;
+stroke: #fff;
+stroke-width: 1px;
+}
+.blocklyIconSymbol {
+fill: #fff;
+}
+.blocklyMinimalBody {
+margin: 0;
+padding: 0;
+}
+.blocklyCommentTextarea {
+background-color: transparent;
+border: 0;
+margin: 0;
+padding: 2px;
+resize: none;
+outline: none;
+font-size: 18px;
+color: #333333;
+letter-spacing: 0.86px;
+cursor: pointer;
+overflow: hidden
+}
+.blocklyHtmlInput {
+border: none;
+border-radius: 4px;
+font-family: sans-serif;
+height: 100%;
+margin: 0;
+outline: none;
+padding: 0 1px;
+width: 100%
+}
+.blocklyMainBackground {
+stroke-width: 1;
+stroke: #c6c6c6;
+}
+.blocklyMutatorBackground {
+fill: #fff;
+stroke: #ddd;
+stroke-width: 1;
+}
+.blocklyFlyoutBackground {
+fill: #FAF4E4;
+fill-opacity: .95;
+}
+.blocklyTransparentBackground {
+opacity: 0;
+}
+.blocklyMainWorkspaceScrollbar {
+z-index: 20;
+}
+.blocklyFlyoutScrollbar {
+z-index: 30;
+}
+.blocklyScrollbarHorizontal, .blocklyScrollbarVertical {
+position: absolute;
+outline: none;
+opacity:0.3;
+}
+.blocklyScrollbarBackground {
+opacity: 0;
+}
+.blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,
+.blocklyScrollbarHandle:hover,
+.blocklyScrollbarBackground:active+.blocklyScrollbarHandle,
+.blocklyScrollbarHandle:active {
+stroke: #000;
+stroke-width: 4;
+}
+.blocklyZoom>image {
+opacity: .4;
+}
+.blocklyZoom>image:hover {
+opacity: .6;
+}
+.blocklyZoom>image:active {
+opacity: .8;
+}
+.blocklyFlyout .blocklyScrollbarHandle {
+fill: #bbb;
+}
+.blocklyFlyout .blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,
+.blocklyFlyout .blocklyScrollbarHandle:hover {
+fill: #aaa;
+}
+.blocklyInvalidInput {
+background: #faa;
+}
+.blocklyAngleCircle {
+stroke: #444;
+stroke-width: 1;
+fill: #ddd;
+fill-opacity: .8;
+}
+.blocklyAngleMarks {
+stroke: #444;
+stroke-width: 1;
+}
+.blocklyAngleGauge {
+fill: #f88;
+fill-opacity: .8;
+}
+.blocklyAngleLine {
+stroke: #f00;
+stroke-width: 2;
+stroke-linecap: round;
+pointer-events: none;
+}
+.blocklyContextMenu {
+border-radius: 4px;
+}
+.blocklyDropdownMenu {
+padding: 0 !important;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+background: url(https://static.codemao.cn/blockly/media/sprites.png) no-repeat -48px -16px !important;
+}
+.blocklyToolboxDiv {
+overflow-x: visible;
+overflow-y: auto;
+position: absolute;
+z-index: 60;
+padding: 0 8px;
+min-width: 105px;
+background: #faf4e4;
+border: 1px solid #f2e7c9;
+border-top: 0;
+border-bottom: 0;
+-webkit-tap-highlight-color: transparent;
+}
+.blocklyTreeRoot {
+padding: 0;
+}
+.blocklyTreeRoot:focus {
+outline: none;
+}
+.blocklyTreeRow {
+height: 22px;
+line-height: 22px;
+margin-bottom: 3px;
+padding-right: 8px;
+white-space: nowrap;
+}
+.blocklyHorizontalTree {
+float: left;
+margin: 1px 5px 8px 0;
+}
+.blocklyHorizontalTreeRtl {
+float: right;
+margin: 1px 0 8px 5px;
+}
+.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {
+margin-left: 8px;
+}
+.blocklyTreeRow:not(.blocklyTreeSelected):hover {
+background-color: #e4e4e4;
+}
+.blocklyTreeSeparator {
+border-bottom: solid #e5e5e5 1px;
+height: 0;
+margin: 5px 0;
+}
+.blocklyTreeSeparatorHorizontal {
+border-right: solid #e5e5e5 1px;
+width: 0;
+padding: 5px 0;
+margin: 0 5px;
+}
+.blocklyTreeIcon {
+vertical-align: middle;
+margin: 0 6px;
+}
+.blocklyTreeIconClosedLtr {
+background-position: -32px -1px;
+}
+.blocklyTreeIconClosedRtl {
+background-position: 0px -1px;
+}
+.blocklyTreeIconOpen {
+background-position: -16px -1px;
+}
+.blocklyTreeSelected>.blocklyTreeIconClosedLtr {
+background-position: -32px -17px;
+}
+.blocklyTreeSelected>.blocklyTreeIconClosedRtl {
+background-position: 0px -17px;
+}
+.blocklyTreeSelected>.blocklyTreeIconOpen {
+background-position: -16px -17px;
+}
+.blocklyTreeIconNone,
+.blocklyTreeSelected>.blocklyTreeIconNone {
+display: none;
+}
+.blocklyTreeLabel {
+cursor: default;
+font-family: sans-serif;
+font-size: 16px;
+padding: 0 3px;
+vertical-align: middle;
+}
+.blocklyToolboxDelete .blocklyTreeLabel {
+cursor: url("https://static.codemao.cn/blockly/media/handdelete.cur"), auto;
+}
+.blocklyTreeSelected .blocklyTreeLabel {
+color: #fff;
+}
+.blocklyWidgetDiv .goog-palette {
+outline: none;
+cursor: default;
+}
+.blocklyWidgetDiv .goog-palette-table {
+border: 1px solid #666;
+border-collapse: collapse;
+}
+.blocklyWidgetDiv .goog-palette-cell {
+height: 13px;
+width: 15px;
+margin: 0;
+border: 0;
+text-align: center;
+vertical-align: middle;
+border-right: 1px solid #666;
+font-size: 1px;
+}
+.blocklyWidgetDiv .goog-palette-colorswatch {
+position: relative;
+height: 13px;
+width: 15px;
+border: 1px solid #666;
+}
+.blocklyWidgetDiv .goog-palette-cell-hover .goog-palette-colorswatch {
+border: 1px solid #FFF;
+}
+.blocklyWidgetDiv .goog-palette-cell-selected .goog-palette-colorswatch {
+border: 1px solid #000;
+color: #fff;
+}
+.blocklyWidgetDiv .goog-menu {
+background: #fff;
+border-radius: 2px;
+box-shadow: 1px 1px 1px #dfe2e4;
+border: 1px solid #dfe2e4;
+cursor: default;
+font: normal 13px Arial, sans-serif;
+margin: 0;
+outline: none;
+padding: 4px 0;
+position: absolute;
+overflow-y: auto;
+overflow-x: hidden;
+max-height: 100%;
+z-index: 20000;
+}
+.blocklyWidgetDiv .goog-menuitem {
+color: #000;
+font: normal 13px Arial, sans-serif;
+list-style: none;
+margin: 0;
+padding: 4px 7em 4px 28px;
+white-space: nowrap;
+}
+.blocklyWidgetDiv .goog-menuitem.goog-menuitem-rtl {
+padding-left: 7em;
+padding-right: 28px;
+}
+.blocklyWidgetDiv .goog-menu-nocheckbox .goog-menuitem,
+.blocklyWidgetDiv .goog-menu-noicon .goog-menuitem {
+padding-left: 12px;
+}
+.blocklyWidgetDiv .goog-menu-noaccel .goog-menuitem {
+padding-right: 20px;
+}
+.blocklyWidgetDiv .goog-menuitem-content {
+color: #000;
+font: normal 13px Arial, sans-serif;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-accel,
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-content {
+color: #ccc !important;
+}
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-icon {
+opacity: 0.3;
+-moz-opacity: 0.3;
+filter: alpha(opacity=30);
+}
+.blocklyWidgetDiv .goog-menuitem-highlight,
+.blocklyWidgetDiv .goog-menuitem-hover {
+background-color: #d6e9f8;
+border-color: #d6e9f8;
+border-style: dotted;
+border-width: 1px 0;
+padding-bottom: 3px;
+padding-top: 3px;
+}
+.blocklyWidgetDiv .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-icon {
+background-repeat: no-repeat;
+height: 16px;
+left: 6px;
+position: absolute;
+right: auto;
+vertical-align: middle;
+width: 16px;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-icon {
+left: auto;
+right: 6px;
+}
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -512px 0;
+}
+.blocklyWidgetDiv .goog-menuitem-accel {
+color: #999;
+direction: ltr;
+left: auto;
+padding: 0 6px;
+position: absolute;
+right: 0;
+text-align: right;
+}
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-accel {
+left: 0;
+right: auto;
+text-align: left;
+}
+.blocklyWidgetDiv .goog-menuitem-mnemonic-hint {
+text-decoration: underline;
+}
+.blocklyWidgetDiv .goog-menuitem-mnemonic-separator {
+color: #999;
+font-size: 12px;
+padding-left: 4px;
+}
+.blocklyWidgetDiv .goog-menuseparator {
+border-top: 1px solid #ccc;
+margin: 4px 0;
+padding: 0;
+}
+</style>
+
+  <title>编程猫</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="full-screen" content="true">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="360-fullscreen" content="true">
+  <script async="" src="./cm_files/analytics.js"></script><script type="text/javascript" async="" src="./cm_files/vds.js"></script><script type="text/javascript">
+    window.kitten_is_ide = true; // This has to happen before kitten.min.js is loaded
+  </script>
+
+  <!--FIXME: Add style for blockly-tree-item when english-->
+  <script type="text/javascript">
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', '96ff754c3d39a658']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'assets.growingio.com/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+<link rel="apple-touch-icon" sizes="57x57" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="kitten"><link rel="icon" type="image/png" sizes="32x32" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/favicon-16x16.png"><link rel="shortcut icon" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/favicon.ico"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="kitten"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="https://ide.codemao.cn/icons-9f11a964837445c2ee9b4e5836068f70/apple-touch-startup-image-1536x2008.png"><script type="text/javascript">window.webpackManifest={"0":"0.4b4ba816631f0c0a3686.js","1":"1.a4e83429b36f23a9f149.js","2":"2.667caf896b524f87a4cb.js","3":"3.d191d65341e6e2340d6f.js","4":"4.98ac4f800a8a308815d4.js","5":"5.2b75e20c0455ed703a38.js","6":"6.020516c54c89497ce772.js","vendor":"vendor.d3009366f30886e50a95.js","kitten":"kitten.26b465d6cc543d66ebf3.js","player":"player.d41d1e22cfebbaa364a9.js","print":"print.beda1a927e2a7c1d19c9.js","wechat_player":"wechat_player.11c84df5655e3622ad26.js"}</script><link href="./cm_files/perfect-scrollbar.min.css" rel="stylesheet"><link href="./cm_files/kitten_49394.css" rel="stylesheet"><style type="text/css">.style__confirm-dialog___2vGSZ{width:35em;height:18.75em;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#fffbf2;border-radius:.25em;outline:none;box-sizing:border-box}.style__confirm-dialog-overlay___HhFrI{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1024;background-color:rgba(0,0,0,.3)}.style__dialog-content___3xLQ6{padding:2.375em;background:#fffbf2;border-radius:.25em;height:100%;box-sizing:border-box}.style__layout___EP7EB{display:-webkit-box;-webkit-box-orient:horizontal;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row}.style__dialog-title___oZm40{font-size:1.25em;color:#776955;letter-spacing:.089375em}.style__dialog-message___LcwCc{font-size:1em;padding-top:.625em;color:#9f9484;letter-spacing:.07125em;width:13.9375em;overflow-y:auto}.style__dialog-img___1WJtY{min-width:11.25em;min-height:10.625em;margin-bottom:.625em;margin-right:1.5em}.style__btn___fiDoW{width:8.4375em;height:2.5em;position:absolute;cursor:pointer;line-height:2.5em;text-align:center}.style__confirm-button-left___3iN_n{left:2.375em;background:#fffbf2;border:.0625em solid #f2e7c9;border-radius:.125em;color:#776955}.style__confirm-button-middle___3VIO2{right:12.25em;background:#60a1f0;border:.0625em solid #589ae9;border-radius:.125em;color:#fff}.style__confirm-button-right___1rkfP{right:2.375em;color:#60a1f0;border:.0625em solid #589ae9}</style><style type="text/css">.index__recorder_wrap___3GbG8{width:100%;display:none}.index__recorder_wrap___3GbG8.index__open___1AhT5{display:block}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW{display:-webkit-box;display:-ms-flexbox;display:flex;background:#fff;padding:.75em;border-bottom:.0625em solid rgba(0,0,0,.05);margin-bottom:.0625em}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__btns___2sM5y{width:6.75em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;float:right}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__btns___2sM5y .index__btn___1zIUU{cursor:pointer;width:3.25em;color:#545e66;text-align:center;line-height:.875em}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__btns___2sM5y .index__btn___1zIUU .index__text___Uz6J2{font-size:.875em;font-weight:200}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__time_wrapper___3sulW{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;width:3.75em}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__time_wrapper___3sulW .index__time_text___2AVeZ{display:inline-block;font-size:.875em;color:#9b9db1;vertical-align:middle}.index__recorder_wrap___3GbG8 .index__record_audio_panel___2qsdW .index__time_wrapper___3sulW .index__recording_icon___2f-R0{display:inline-block;width:1.25em;height:1.25em;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPScyMHB4JyBoZWlnaHQ9JzIwcHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLWZhY2Vib29rIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIgY2xhc3M9ImJrIj48L3JlY3Q+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAgNTApIj48cmVjdCB4PSItMTAiIHk9Ii0zMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmNhMDMyIiBvcGFjaXR5PSIwLjYiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjIiIHRvPSIxIiBiZWdpbj0iMHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlTcGxpbmVzPSIwLjEgMC45IDAuNCAxIiBrZXlUaW1lcz0iMDsxIiB2YWx1ZXM9IjI7MSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvcmVjdD48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAgNTApIj48cmVjdCB4PSItMTAiIHk9Ii0zMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmNhMDMyIiBvcGFjaXR5PSIwLjgiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjIiIHRvPSIxIiBiZWdpbj0iMC4xcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiIGNhbGNNb2RlPSJzcGxpbmUiIGtleVNwbGluZXM9IjAuMSAwLjkgMC40IDEiIGtleVRpbWVzPSIwOzEiIHZhbHVlcz0iMjsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9yZWN0PjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCA1MCkiPjxyZWN0IHg9Ii0xMCIgeT0iLTMwIiB3aWR0aD0iMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmY2EwMzIiIG9wYWNpdHk9IjAuOSI+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMiIgdG89IjEiIGJlZ2luPSIwLjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyIgY2FsY01vZGU9InNwbGluZSIga2V5U3BsaW5lcz0iMC4xIDAuOSAwLjQgMSIga2V5VGltZXM9IjA7MSIgdmFsdWVzPSIyOzEiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L3JlY3Q+PC9nPjwvc3ZnPg==);background-repeat:no-repeat;font-weight:200;vertical-align:middle;margin-right:1.25em}.index__img_error_wrap___18EBG{width:100%;text-align:center;position:absolute;top:-2.1875em;background:transparent;display:none}.index__img_error_wrap___18EBG.index__show_error___2paZk{display:block}.index__img_error_wrap___18EBG .index__img_error___2ApAP{display:inline-block;background-color:rgba(0,0,0,.3);padding:.3125em 1.25em;line-height:1.5em;font-weight:300;font-size:.75em;color:#ebebeb;border-radius:1.5625em}.index__toolbox_wrap___xXMrg{min-height:2.75em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-negative:0;flex-shrink:0;color:gray;padding:0 .625em .625em;background:#fff;position:relative}.index__toolbox_wrap___xXMrg.index__hide___3bJyX{display:none;-webkit-animation:index__fadeOutDown___10O_E .3s;animation:index__fadeOutDown___10O_E .3s}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU i,.index__toolbox_wrap___xXMrg .index__icon___DAi0D,.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__send_msg_btn___1c0WT>.index__send_icon___1t7Gr{display:inline-block;background-image:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9);background-repeat:no-repeat}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd{display:none;position:absolute;top:-12.9375em;left:.375em;background:#fff;border:.125em solid #f2f2f2;border-radius:.5em;box-shadow:0 .25em .75em 0 rgba(0,0,0,.5);padding-bottom:1em}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd.index__show___2VD2i{display:block}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd:after{content:"";width:1.25em;height:1.25em;position:absolute;bottom:-.5em;left:1em;display:block;-webkit-transform:rotate(45deg);transform:rotate(45deg);background:#fff;box-shadow:.125em .125em .3125em -.125em rgba(0,0,0,.5)}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd .index__emoticons___2cTjO{padding:1.09375em;overflow:auto;height:11.5625em;width:20.3125em;padding-bottom:0}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd .index__emoticons___2cTjO .index__emoticon_item___27rpQ{width:3.125em;height:3.125em;vertical-align:top;margin:.15625em;cursor:pointer;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.index__toolbox_wrap___xXMrg .index__emoticon_wrap___nfdPd .index__emoticons___2cTjO .index__emoticon_item___27rpQ img{max-width:3.125em;max-height:3.125em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G{height:3.0625em;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU{cursor:pointer;margin:0 .625em;position:relative}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU:hover .index__prompt___2jF_s{visibility:visible}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__emoji_icon___3j-IE{width:1.5em;height:1.5em;background-position:-.5625em -.6875em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__emoji_icon___3j-IE:hover{background-position:-.5625em -3.25em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__emoji_icon___3j-IE.index__active___3SM_Y{background-position:-.5625em -5.75em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__img_icon___ogsOr{background-position:-3.25em -.75em;width:1.5em;height:1.1875em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__img_icon___ogsOr:hover{background-position:-3.25em -3.3125em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__img_icon___ogsOr.index__active___3SM_Y{background-position:-3.25em -5.8125em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__file_icon___4PNQn{background-position:-3.25em -11.6875em;width:1.375em;height:1.125em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__file_icon___4PNQn:hover{background-position:-3.25em -14.25em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__file_icon___4PNQn.index__active___3SM_Y{background-position:-3.25em -16.6875em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__recorder_icon___2POXf{background-position:-5.9375em -.6875em;width:1.0625em;height:1.5em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__recorder_icon___2POXf:hover{background-position:-5.9375em -3.25em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__recorder_icon___2POXf.index__active___3SM_Y{background-position:-5.9375em -5.75em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__screenshot_icon___1veCM{background-position:-.6875em -11.375em;width:1.375em;height:1.5em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__screenshot_icon___1veCM:hover{background-position:-.6875em -13.9375em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__screenshot_icon___1veCM.index__active___3SM_Y{background-position:-.6875em -16.4375em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__spliter_icon___9bNgu{display:inline-block;background-color:#e6e2da;width:.0625em;height:1.875em;background-position:bottom}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__worker_icon___zAFRi{background-position:-8.125em -.625em;width:1.375em;height:1.4375em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__worker_icon___zAFRi:hover{background-position:-8.125em -3.1875em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__worker_icon___zAFRi.index__active___3SM_Y{background-position:-8.125em -5.6875em}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__prompt___2jF_s{display:inline-block;color:#6c4c41;font-size:.875em;height:1.5625em;background:hsla(0,0%,93%,.5);border:.0625em solid #bfbfbf;border-radius:.25em;position:absolute;z-index:10;left:-.5em;top:1.75em;padding:0 .125em;text-align:center;line-height:1.5625em;white-space:nowrap;visibility:hidden}.index__toolbox_wrap___xXMrg .index__control_btns_wrap___2Zi8G .index__btn___1zIUU .index__can_not_recorder___205eL{-webkit-filter:opacity(.3);filter:opacity(.3)}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:4.25em;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__message_input___37KnV{height:100%;outline:none;background:#f4f4f4;border-radius:.25em;font-size:100%;font-weight:300;padding:.75em;display:block;resize:none;word-break:break-all;width:70%;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin:0 .625em 0 .3125em;overflow-y:auto}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__message_input___37KnV span{display:inline-block;position:relative}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__message_input___37KnV span img{max-height:4.0625em}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__message_input___37KnV .index__uploading___2yEZ0{display:inline-block;position:relative}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__message_input___37KnV .index__uploading___2yEZ0:after{content:"";position:absolute;z-index:1001;left:0;right:0;top:85%;bottom:0;background:rgba(0,0,0,.5);-webkit-animation:index__show-mask___kgAiO 4s 1;animation:index__show-mask___kgAiO 4s 1}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__send_msg_btn___1c0WT{cursor:pointer;position:relative;top:0;background:#64afff;border:.0625em solid rgba(100,175,255,.5);box-shadow:0 .125em .625em 0 rgba(100,175,255,.5);border-radius:50%;width:3.75em;height:3.75em;text-align:center;line-height:4.25em;color:#fff;transition:all .1s}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__send_msg_btn___1c0WT>.index__send_icon___1t7Gr{display:inline-block;background-position:-.6875em -9em;width:1.375em;height:1.125em}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__send_msg_btn___1c0WT:hover{background:#33c2ff;box-shadow:0 .125em .625em 0 rgba(100,175,255,.5)}.index__toolbox_wrap___xXMrg .index__input_wrap___2J35K .index__send_msg_btn___1c0WT:active{position:relative;top:.125em;color:rgba(0,0,0,.5);background:#31a6f5;box-shadow:0 .125em .625em 0 rgba(100,175,255,.5)}.index__toolbox_wrap___xXMrg .index__tip_box___YxxOo{width:calc(100% + .625em);height:100%;position:absolute;background:#f4f4f4;text-align:center;color:#555f67;z-index:10;font-size:.875em;padding-top:1.25em;left:-.625em}.index__toolbox_wrap___xXMrg .index__tip_box___YxxOo .index__warning_icon___2lHZ7{display:inline-block;background:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9) no-repeat -18.6875em -.3125em;width:.875em;height:.875em}.index__toolbox_wrap___xXMrg .index__flush_btn___3AxXn{display:block;width:9.75em;height:2em;line-height:2em;border-radius:.125em;background:#82beff;text-align:center;color:#fff;margin:0 auto;margin-top:1.25em;cursor:pointer}.index__toolbox_wrap___xXMrg .index__hidden___36X5d{display:none}.index__spinner___NjeAa{margin:.625em auto 0}.index__spinner___NjeAa>div{width:1.125em;height:1.125em;background-color:#82beff;border-radius:100%;display:inline-block;-webkit-animation:index__sk-bouncedelay___30ATF 1.4s infinite ease-in-out both;animation:index__sk-bouncedelay___30ATF 1.4s infinite ease-in-out both}.index__spinner___NjeAa .index__bounce1___2To6K{-webkit-animation-delay:-.32s;animation-delay:-.32s}.index__spinner___NjeAa .index__bounce2___jsi6z{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes index__sk-bouncedelay___30ATF{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes index__sk-bouncedelay___30ATF{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes index__show-mask___kgAiO{0%{top:0}1%{top:0}30%{top:30%}75%{top:60%}to{top:85%}}@keyframes index__show-mask___kgAiO{0%{top:0}1%{top:0}30%{top:30%}75%{top:60%}to{top:85%}}</style><style type="text/css">.animate__fadeInUp___E9831{-webkit-animation:animate__fadeInUp___E9831 .3s;animation:animate__fadeInUp___E9831 .3s}.animate__fadeInDown___BIGfY{-webkit-animation:animate__fadeInDown___BIGfY .3s;animation:animate__fadeInDown___BIGfY .3s}.animate__fadeIn___OyiFX{-webkit-animation:animate__fadeIn___OyiFX .5s;animation:animate__fadeIn___OyiFX .5s}.animate__fadeOut___1YEZI{-webkit-animation:animate__fadeOut___1YEZI .5s;animation:animate__fadeOut___1YEZI .5s}.animate__fadeOutDown___yKtkL{-webkit-animation:animate__fadeOutDown___yKtkL .3s;animation:animate__fadeOutDown___yKtkL .3s}.animate__fadeOutUp___ravL2{-webkit-animation:animate__fadeOutUp___ravL2 .3s;animation:animate__fadeOutUp___ravL2 .3s}.animate__fadeOutIn___3ldYb{-webkit-animation:animate__fadeOutIn___3ldYb .5s;animation:animate__fadeOutIn___3ldYb .5s}.animate__opacity___243eU{opacity:.3}.animate__zoomIn___9_gv9{-webkit-animation:animate__zoomIn___9_gv9 .3s;animation:animate__zoomIn___9_gv9 .3s}.animate__mlz-opcity___3EVCN{-webkit-animation:animate__opacity___243eU .3s;animation:animate__opacity___243eU .3s}.animate__message_loading_content___5phpY{background-color:#fff2e6;padding:.5625em 1.25em;border-radius:1.25em}.animate__message_loading_content___5phpY ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;list-style:none;width:3.125em;height:1.25em;line-height:1.25em}.animate__message_loading_content___5phpY ul li{width:.5em;height:.5em;background-color:#666;margin-right:.375em;border-radius:50%}.animate__message_loading_content___5phpY ul li:nth-child(odd){-webkit-animation:animate__loading-down-up___3FNNR .5s ease 0s infinite alternate-reverse both;animation:animate__loading-down-up___3FNNR .5s ease 0s infinite alternate-reverse both}.animate__message_loading_content___5phpY ul li:nth-child(2n){-webkit-animation:animate__loading-down-up___3FNNR .5s ease .5s infinite alternate-reverse both;animation:animate__loading-down-up___3FNNR .5s ease .5s infinite alternate-reverse both}.animate__message_loading_content___5phpY ul li:last-child{margin-right:0}@-webkit-keyframes animate__fadeInUp___E9831{0%{opacity:0;-webkit-transform:translateY(1.875em);transform:translateY(1.875em)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes animate__fadeInUp___E9831{0%{opacity:0;-webkit-transform:translateY(1.875em);transform:translateY(1.875em)}to{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes animate__fadeInDown___BIGfY{0%{opacity:0;-webkit-transform:translateY(-1.875em);transform:translateY(-1.875em)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes animate__fadeInDown___BIGfY{0%{opacity:0;-webkit-transform:translateY(-1.875em);transform:translateY(-1.875em)}to{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes animate__fadeIn___OyiFX{0%{opacity:.8}to{opacity:1}}@keyframes animate__fadeIn___OyiFX{0%{opacity:.8}to{opacity:1}}@-webkit-keyframes animate__fadeOut___1YEZI{0%{opacity:1}to{opacity:0}}@keyframes animate__fadeOut___1YEZI{0%{opacity:1}to{opacity:0}}@-webkit-keyframes animate__fadeOutDown___yKtkL{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@keyframes animate__fadeOutDown___yKtkL{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@-webkit-keyframes animate__fadeOutUp___ravL2{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes animate__fadeOutUp___ravL2{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@-webkit-keyframes animate__fadeOutIn___3ldYb{0%{opacity:1}50%{opacity:.7}to{opacity:1}}@keyframes animate__fadeOutIn___3ldYb{0%{opacity:1}50%{opacity:.7}to{opacity:1}}@-webkit-keyframes animate__zoomIn___9_gv9{0%{opacity:0;width:5.75em;height:2.5em;content:""}99%{content:""}to{width:100%;height:100%}}@keyframes animate__zoomIn___9_gv9{0%{opacity:0;width:5.75em;height:2.5em;content:""}99%{content:""}to{width:100%;height:100%}}@-webkit-keyframes animate__loading-down-up___3FNNR{0%{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(.75em);transform:translateY(.75em);background-color:#ccc}}@keyframes animate__loading-down-up___3FNNR{0%{-webkit-transform:translateY(0);transform:translateY(0)}to{-webkit-transform:translateY(.75em);transform:translateY(.75em);background-color:#ccc}}@-webkit-keyframes animate__opacity___243eU{0%{opacity:0}to{opacity:1}}@keyframes animate__opacity___243eU{0%{opacity:0}to{opacity:1}}</style><style type="text/css">.index__buttons_panel___1OcLa{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;min-height:3.5em;background:#fff;width:100%;box-shadow:inset 0 .0625em 0 0 rgba(0,0,0,.1);padding:.625em;-ms-flex-negative:0;flex-shrink:0;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.index__buttons_panel___1OcLa .index__icon___njri3,.index__buttons_panel___1OcLa .index__input_wrap___1qNMA .index__send_name___VkBW6 .index__send_icon___1-kT4{display:inline-block;background-image:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9);background-repeat:no-repeat}.index__buttons_panel___1OcLa .index__user_avatar___1uSPx{width:2.5em;height:2.5em;border-radius:50%;background-repeat:no-repeat;background-size:100% 100%}.index__buttons_panel___1OcLa .index__buttons_wrap___2PfUb{width:80%;margin-right:.625em}.index__buttons_panel___1OcLa .index__user_username___3Zvfw{font-size:.75em;line-height:1em;margin-bottom:.3125em;text-align:right;color:#1e648c;overflow:hidden;text-overflow:ellipsis}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb{position:relative;min-height:2.142em;padding:0;max-height:21.428em;word-break:break-all;border-radius:1.25em;border-top-right-radius:1.4em;min-width:3.125em;border:.0625em solid #a5cfe6;background-color:#ebf8ff}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb .index__button_border_icon___7ViH5{position:absolute;z-index:1;top:-.0625em;right:-.0625em;width:1.25em;height:1.25em;background:url(https://static.codemao.cn/mobile/chat/mlz_message_bubble.svg?7e05ea0400589bd89f236f579033c847) no-repeat;background-position:-2.5em -4.6875em;font-size:1em}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb .index__button_item___2j9j_{cursor:pointer;z-index:2;position:relative;top:-.3125em;margin:.3125em;margin-top:.625em;padding:.625em 1.25em;color:#fff;font-size:.9375em;text-align:center;background-image:linear-gradient(-180deg,#55affe,#4c9ee6);border:.0625em solid #438ccc;box-shadow:inset 0 .0625em 0 hsla(0,0%,100%,.3),inset 0 -.0625em .0625em hsla(0,0%,100%,.15),0 .25em 0 #3773a6,0 .3125em .25em rgba(0,0,0,.3);background:linear-gradient(180deg,#55affe,#4c9ee6) #00a1cb;border-radius:1.375em;transition:all .1s linear}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb .index__button_item___2j9j_:hover{background:linear-gradient(180deg,#87c7ff,#4c9ee6) #00a1cb}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb .index__button_item___2j9j_:active{position:relative;top:-.125em;color:#1e648c;text-shadow:0 .0625em 0 hsla(0,0%,100%,.4);background:linear-gradient(180deg,#3aa4ff,#3493e6) #00a1cb;box-shadow:inset 0 .0625em 0 hsla(0,0%,100%,.3),inset 0 -.0625em .0625em hsla(0,0%,100%,.15),0 .0625em 0 #007998,0 .125em .1875em rgba(0,0,0,.3)}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb .index__image_button_item___3Yf8L{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.index__buttons_panel___1OcLa .index__button_item_wrap___3urUb img{max-height:5em;max-width:5em;margin:0 auto;display:block}.index__buttons_panel___1OcLa .index__answer_item_wrap___328ih{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;border-radius:1.125em;padding:.15625em}.index__buttons_panel___1OcLa .index__answer_item_wrap___328ih .index__button_item___2j9j_{top:0;margin:.15625em;padding:1.25em;font-size:1em;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-align:center;margin-bottom:.625em}.index__buttons_panel___1OcLa .index__answer_item_wrap___328ih .index__button_item___2j9j_ span{font-size:1.5em}.index__buttons_panel___1OcLa .index__answer_item_wrap___328ih .index__button_item___2j9j_:active{top:.1875em}.index__buttons_panel___1OcLa .index__image_button_wrap___2Je6z{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}.index__buttons_panel___1OcLa .index__input_tip___6OwcH{font-size:.875em;color:#545e66;margin:0 .625em;line-height:2.25em}.index__buttons_panel___1OcLa .index__input_wrap___1qNMA{display:-webkit-box;display:-ms-flexbox;display:flex;border:.0625em solid #ccc;border-radius:1.125em;line-height:2.25em;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;overflow:hidden}.index__buttons_panel___1OcLa .index__input_wrap___1qNMA .index__button_input___J3Kn2{display:inline-block;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;background:#fff;margin-left:1.25em;outline:none;border:none;font-size:.875em;color:#545e66}.index__buttons_panel___1OcLa .index__input_wrap___1qNMA .index__send_name___VkBW6{display:inline-block;width:1.875em;height:1.875em;border-radius:50%;background:#4c9ee6;text-align:center;line-height:1.875em;margin:.1875em;cursor:pointer}.index__buttons_panel___1OcLa .index__input_wrap___1qNMA .index__send_name___VkBW6 .index__send_icon___1-kT4{width:.875em;height:1em;display:inline-block;background-position:-11.875em -.625em}</style><style type="text/css">@-webkit-keyframes index__playAudio___3ks0J{0%{background-position:-.5em -.3125em}33.33%{background-position:-2.375em -.3125em}66.66%{background-position:-4.25em -.3125em}to{background-position:-.5em -.3125em}}@keyframes index__playAudio___3ks0J{0%{background-position:-.5em -.3125em}33.33%{background-position:-2.375em -.3125em}66.66%{background-position:-4.25em -.3125em}to{background-position:-.5em -.3125em}}@-webkit-keyframes index__uploading-animate___ztO4W{0%{height:90%}to{height:10%}}@keyframes index__uploading-animate___ztO4W{0%{height:90%}to{height:10%}}.index__message_row___2WgQt{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:1em;position:relative}.index__message_row___2WgQt:first-child{margin-top:1.25em}.index__message_row___2WgQt .index__user_avatar___3SaVv{width:2.125em;height:2.125em;border-radius:50%;background-repeat:no-repeat;background-size:100% 100%}.index__message_row___2WgQt .index__message_wrap___1CpvP{max-width:60%;margin-right:.75em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__message_username___tuYCh{font-size:.75em;font-weight:300;line-height:.875em;margin-bottom:.1875em;padding-top:.1875em;padding-bottom:.1875em;max-height:21.428em;overflow:hidden;text-overflow:ellipsis}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT{position:relative}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__border_icon___16zjo{width:1.25em;height:1.25em;display:inline-block;position:absolute;z-index:10;background-repeat:no-repeat}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__link_download___2i49-{text-decoration:none;display:block;overflow-y:hidden;position:relative}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__image_content___1CTMa,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__proof_content___2rFvd,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__text_content___1wlZB,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc{font-size:.9375em;font-weight:300;margin-top:.2em;line-height:1.4em;min-height:1.5em;padding:.3em .5em;max-height:21.428em;word-wrap:break-word;border-radius:1em;position:relative;min-width:3.1875em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__image_content___1CTMa,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__proof_content___2rFvd,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc{font-size:1em;padding-left:0}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 img,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX img,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU img,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__image_content___1CTMa img,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__proof_content___2rFvd img,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc img{max-height:6.25em;max-width:9.375em;border-radius:.3125em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__proof_content___2rFvd,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__proof_content___2rFvd img{border-radius:0}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_loading___2fYHT{background:url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGRzLXNwaW5uZXIiIHdpZHRoPSI2MHB4IiAgaGVpZ2h0PSI2MHB4IiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBzdHlsZT0iYmFja2dyb3VuZDogbm9uZTsiPjxnIHRyYW5zZm9ybT0icm90YXRlKDAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iLTAuOTE2NjY2NjY2NjY2NjY2NnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+CiAgPC9yZWN0Pgo8L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMzAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iLTAuODMzMzMzMzMzMzMzMzMzNHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+CiAgPC9yZWN0Pgo8L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNjAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iLTAuNzVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPgogIDwvcmVjdD4KPC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDkwIDUwIDUwKSI+CiAgPHJlY3QgeD0iNDciIHk9IjI0IiByeD0iOS40IiByeT0iNC44IiB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgZmlsbD0iIzI4MjkyZiI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjE7MCIgdGltZXM9IjA7MSIgZHVyPSIxcyIgYmVnaW49Ii0wLjY2NjY2NjY2NjY2NjY2NjZzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPgogIDwvcmVjdD4KPC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDEyMCA1MCA1MCkiPgogIDxyZWN0IHg9IjQ3IiB5PSIyNCIgcng9IjkuNCIgcnk9IjQuOCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIGZpbGw9IiMyODI5MmYiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgdmFsdWVzPSIxOzAiIHRpbWVzPSIwOzEiIGR1cj0iMXMiIGJlZ2luPSItMC41ODMzMzMzMzMzMzMzMzM0cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT4KICA8L3JlY3Q+CjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iLTAuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+CiAgPC9yZWN0Pgo8L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMTgwIDUwIDUwKSI+CiAgPHJlY3QgeD0iNDciIHk9IjI0IiByeD0iOS40IiByeT0iNC44IiB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgZmlsbD0iIzI4MjkyZiI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjE7MCIgdGltZXM9IjA7MSIgZHVyPSIxcyIgYmVnaW49Ii0wLjQxNjY2NjY2NjY2NjY2NjdzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPgogIDwvcmVjdD4KPC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDIxMCA1MCA1MCkiPgogIDxyZWN0IHg9IjQ3IiB5PSIyNCIgcng9IjkuNCIgcnk9IjQuOCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIGZpbGw9IiMyODI5MmYiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgdmFsdWVzPSIxOzAiIHRpbWVzPSIwOzEiIGR1cj0iMXMiIGJlZ2luPSItMC4zMzMzMzMzMzMzMzMzMzMzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT4KICA8L3JlY3Q+CjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgyNDAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iLTAuMjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPgogIDwvcmVjdD4KPC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDI3MCA1MCA1MCkiPgogIDxyZWN0IHg9IjQ3IiB5PSIyNCIgcng9IjkuNCIgcnk9IjQuOCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIGZpbGw9IiMyODI5MmYiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgdmFsdWVzPSIxOzAiIHRpbWVzPSIwOzEiIGR1cj0iMXMiIGJlZ2luPSItMC4xNjY2NjY2NjY2NjY2NjY2NnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+CiAgPC9yZWN0Pgo8L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMzAwIDUwIDUwKSI+CiAgPHJlY3QgeD0iNDciIHk9IjI0IiByeD0iOS40IiByeT0iNC44IiB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgZmlsbD0iIzI4MjkyZiI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiB2YWx1ZXM9IjE7MCIgdGltZXM9IjA7MSIgZHVyPSIxcyIgYmVnaW49Ii0wLjA4MzMzMzMzMzMzMzMzMzMzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT4KICA8L3JlY3Q+CjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgzMzAgNTAgNTApIj4KICA8cmVjdCB4PSI0NyIgeT0iMjQiIHJ4PSI5LjQiIHJ5PSI0LjgiIHdpZHRoPSI2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMjgyOTJmIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMTswIiB0aW1lcz0iMDsxIiBkdXI9IjFzIiBiZWdpbj0iMHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+CiAgPC9yZWN0Pgo8L2c+PC9zdmc+) no-repeat 2.8125em -.875em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28{width:10em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 .index__audio_icon___wRU0P{display:inline-block;position:relative;background:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9) no-repeat -11.8125em -5.0625em;width:1.3125em;height:1.25em;vertical-align:middle;-webkit-transform:rotate(0);transform:rotate(0)}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 .index__audio_icon___wRU0P.index__playing___3z4KX{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjkwcHgiIGhlaWdodD0iMzBweCIgdmlld0JveD0iMCAwIDkwIDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MS4yICgzNTM5NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+c291bmQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgICAgIDxnIGlkPSJzb3VuZCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiPgogICAgICAgICAgICA8cGF0aCBkPSJNMTMsOSBDMTMsOSAxNC44NjA4Mzk4LDExLjU4MDU2NjQgMTUsMTUgQzE1LjEzOTE2MDIsMTguNDE5NDMzNiAxMywyMSAxMywyMSIgaWQ9IkxpbmUiIG9wYWNpdHk9IjAuMTAwMDAwMDAxIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNyw2IEMxNyw2IDIwLDkuMzkzNTU0NjkgMjAsMTUgQzIwLDIwLjYwNjQ0NTMgMTcsMjQgMTcsMjQiIGlkPSJMaW5lLUNvcHktMiIgb3BhY2l0eT0iMC4xMDAwMDAwMDEiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTksMTEgQzksMTEgMTAsMTIuMjUzOTA2MiAxMCwxNSBDMTAsMTcuNzQ2MDkzOCA5LDE5IDksMTkiIGlkPSJMaW5lLUNvcHkiIG9wYWNpdHk9IjAuNSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMsOSBDNDMsOSA0NC44NjA4Mzk4LDExLjU4MDU2NjQgNDUsMTUgQzQ1LjEzOTE2MDIsMTguNDE5NDMzNiA0MywyMSA0MywyMSIgaWQ9IkxpbmUiIG9wYWNpdHk9IjAuNSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcsNiBDNDcsNiA1MCw5LjM5MzU1NDY5IDUwLDE1IEM1MCwyMC42MDY0NDUzIDQ3LDI0IDQ3LDI0IiBpZD0iTGluZS1Db3B5LTIiIG9wYWNpdHk9IjAuMTAwMDAwMDAxIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0zOSwxMSBDMzksMTEgNDAsMTIuMjUzOTA2MiA0MCwxNSBDNDAsMTcuNzQ2MDkzOCAzOSwxOSAzOSwxOSIgaWQ9IkxpbmUtQ29weSIgb3BhY2l0eT0iMC41Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik03Myw5IEM3Myw5IDc0Ljg2MDgzOTgsMTEuNTgwNTY2NCA3NSwxNSBDNzUuMTM5MTYwMiwxOC40MTk0MzM2IDczLDIxIDczLDIxIiBpZD0iTGluZSIgb3BhY2l0eT0iMC41Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik03Nyw2IEM3Nyw2IDgwLDkuMzkzNTU0NjkgODAsMTUgQzgwLDIwLjYwNjQ0NTMgNzcsMjQgNzcsMjQiIGlkPSJMaW5lLUNvcHktMiIgb3BhY2l0eT0iMC41Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik02OSwxMSBDNjksMTEgNzAsMTIuMjUzOTA2MiA3MCwxNSBDNzAsMTcuNzQ2MDkzOCA2OSwxOSA2OSwxOSIgaWQ9IkxpbmUtQ29weSIgb3BhY2l0eT0iMC41Ij48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) no-repeat -.5em -.3125em;-webkit-animation:index__playAudio___3ks0J 1s infinite forwards step-start;animation:index__playAudio___3ks0J 1s infinite forwards step-start}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 .index__audio_icon_student___2qXUb{left:6.25em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 .index__audio_icon_teacher___3Amgn{right:6.25em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_time___2PFyv{position:absolute;left:1.625em;font-size:.875em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__game_bg___320g1,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__video_bg___12pt-{width:10em;height:7.5em;border-radius:1.25em;overflow:hidden;background-image:url(https://static.codemao.cn/mobile/chat/mlz_message_icon.png?84b257f4dc3cf54acf50ea62e339b18e);background-position:-5.4375em -8.5625em;background-repeat:no-repeat}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__game_bg___320g1 .index__video_mask___1iy2T,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__video_bg___12pt- .index__video_mask___1iy2T{height:100%;width:100%;background:rgba(0,0,0,.4);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__game_bg___320g1 .index__video_play_icon___U5jx5,.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__video_bg___12pt- .index__video_play_icon___U5jx5{background:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9) no-repeat -11.75em -7.4375em;display:inline-block;width:4.25em;height:4.25em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__game_bg___320g1{background-position:-5.4375em -17.3125em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__video_content___yFGPc .index__game_bg___320g1 .index__game_play_icon___Ljnku{background:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg?3cd3ffb02be743f47e3b7d8565d668a9) no-repeat -17em -7.375em;display:inline-block;width:4.25em;height:4.25em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX img{max-height:6.25em;max-width:9.375em;cursor:pointer}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX .index__imageAudio_wrap___1bKma{position:absolute;width:1.875em;height:1.875em;border-radius:.9375em;background:rgba(0,0,0,.4);right:.3125em;bottom:.3125em;text-align:center;padding-top:.4375em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_pic_content___3CjCX .index__imageAudio_wrap___1bKma .index__imageAudio_icon___2d91q{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjYwcHgiIGhlaWdodD0iMzBweCIgdmlld0JveD0iMCAwIDYwIDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MS4yICgzNTM5NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+5binPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZD0iTTAsNS41OTk2OTE5OSBDMCw0LjcxNjIwNjUgMC43MDgyNzcyMjUsNCAxLjYwNjU4ODQyLDQgTDMuNSw0IEw5LjA3NTU1ODEzLDEuMTAzNjA2MTYgQzEwLjI0ODg1NSwwLjQ5NDEwMTMxIDExLjIsMS4wNzQ2NDk1NyAxMS4yLDIuMzk1MzYxNjYgTDExLjIsMTMuNjA0NjM4MyBDMTEuMiwxNC45Mjc1NjAxIDEwLjI0MDM1ODUsMTUuNTAxNDg0OSA5LjA3NTU1ODEzLDE0Ljg5NjM5MzggTDMuNSwxMiBMMS42MDY1ODg0MiwxMiBDMC43MTkyOTQxMzgsMTIgMCwxMS4yOTAwNTM0IDAsMTAuNDAwMzA4IEwwLDUuNTk5NjkxOTkgWiIgaWQ9InBhdGgtMSI+PC9wYXRoPgogICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIG1hc2tDb250ZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiB4PSIwIiB5PSIwIiB3aWR0aD0iMTEuMiIgaGVpZ2h0PSIxNC4yNzU4MTQzIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDxwYXRoIGQ9Ik0wLDUuNTk5NjkxOTkgQzAsNC43MTYyMDY1IDAuNzA4Mjc3MjI1LDQgMS42MDY1ODg0Miw0IEwzLjUsNCBMOS4wNzU1NTgxMywxLjEwMzYwNjE2IEMxMC4yNDg4NTUsMC40OTQxMDEzMSAxMS4yLDEuMDc0NjQ5NTcgMTEuMiwyLjM5NTM2MTY2IEwxMS4yLDEzLjYwNDYzODMgQzExLjIsMTQuOTI3NTYwMSAxMC4yNDAzNTg1LDE1LjUwMTQ4NDkgOS4wNzU1NTgxMywxNC44OTYzOTM4IEwzLjUsMTIgTDEuNjA2NTg4NDIsMTIgQzAuNzE5Mjk0MTM4LDEyIDAsMTEuMjkwMDUzNCAwLDEwLjQwMDMwOCBMMCw1LjU5OTY5MTk5IFoiIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgICAgICA8bWFzayBpZD0ibWFzay00IiBtYXNrQ29udGVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgbWFza1VuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjExLjIiIGhlaWdodD0iMTQuMjc1ODE0MyIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTMiPjwvdXNlPgogICAgICAgIDwvbWFzaz4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLluKciIHN0cm9rZT0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS4wMDAwMDAsIDcuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8dXNlIGlkPSJSZWN0YW5nbGUtMzUiIG1hc2s9InVybCgjbWFzay0yKSIgc3Ryb2tlLXdpZHRoPSIyIiB4bGluazpocmVmPSIjcGF0aC0xIj48L3VzZT4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNC40LDMuMiBDMTQuNCwzLjIgMTUuODg4NjcxOSw1LjI2NDQ1MzEyIDE2LDggQzE2LjExMTMyODEsMTAuNzM1NTQ2OSAxNC40LDEyLjggMTQuNCwxMi44IiBpZD0iTGluZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTI0LUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM1LjAwMDAwMCwgNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDx1c2UgaWQ9IlJlY3RhbmdsZS0zNSIgbWFzaz0idXJsKCNtYXNrLTQpIiBzdHJva2Utd2lkdGg9IjIiIHhsaW5rOmhyZWY9IiNwYXRoLTMiPjwvdXNlPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE0LjQsMy4yIEMxNC40LDMuMiAxNS44ODg2NzE5LDUuMjY0NDUzMTIgMTYsOCBDMTYuMTExMzI4MSwxMC43MzU1NDY5IDE0LjQsMTIuOCAxNC40LDEyLjgiIGlkPSJMaW5lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNy42LDAuOCBDMTcuNiwwLjggMjAsMy41MTQ4NDM3NSAyMCw4IEMyMCwxMi40ODUxNTYzIDE3LjYsMTUuMiAxNy42LDE1LjIiIGlkPSJMaW5lLUNvcHktMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==) no-repeat -.3125em -.4375em;display:inline-block;width:1.0625em;height:.9375em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__uploading___2TANU{background:rgba(0,0,0,.4);width:100%;height:10%;position:absolute;z-index:12;border-radius:1em 1em 0 0;-webkit-animation:index__uploading-animate___ztO4W 10s 1;animation:index__uploading-animate___ztO4W 10s 1;margin-top:.25em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU{font-size:1em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;text-align:center;width:6.875em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU .index__file_bg___1znIM{width:3.625em;height:4.6875em;margin:0 auto;background:url(https://static.codemao.cn/mobile/chat/mlz_message_icon.png?84b257f4dc3cf54acf50ea62e339b18e) no-repeat -.5625em -8.5625em}.index__message_row___2WgQt .index__message_wrap___1CpvP .index__content_border___2-APT .index__file_content___IqQYU .index__file_name___35PY9{font-size:.75em}.index__message_row___2WgQt.index__myself___1cVIl{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__message_username___tuYCh{text-align:right;color:#1e648c}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__content_border___2-APT .index__content___nUhqu{background-color:#ebf8ff;color:#1f648c;border:.0625em solid #35acf2}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__content_border___2-APT .index__lt___2cxRz{display:none}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__content_border___2-APT .index__rt___1IQrA{right:0;top:0;background-position:-2.5em -4.6875em}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28{padding-left:.625em}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__content_border___2-APT .index__audio_content___3YS28 .index__audio_icon___wRU0P{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.index__message_row___2WgQt.index__myself___1cVIl .index__message_wrap___1CpvP .index__hide_border___3xNxn .index__border_icon___16zjo{display:none}.index__message_row___2WgQt.index__other___2ZWzV{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP{margin-left:.75em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__audio_content___3YS28{position:relative;padding-right:.625em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__audio_content___3YS28 .index__red_dot___IHHJp{cursor:default;position:absolute;top:1em;right:-.75em;margin-top:-.25em;display:block;width:.5em;height:.5em;border-radius:50%;background:#ff5523}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__content_border___2-APT .index__content___nUhqu{background-color:#fff1e6;color:#734822;border:.0625em solid #8b572a}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__content_border___2-APT .index__lt___2cxRz{left:0;top:0;background-position:-5em -4.6875em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__content_border___2-APT .index__rt___1IQrA{display:none}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__user_1___1nKYY .index__lt___2cxRz{background-position:-.625em -.625em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__user_2___1DokC .index__lt___2cxRz{background-position:-9.375em -.625em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__user_3___1I9Ig .index__lt___2cxRz{background-position:-13.75em -.625em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__user_4___1CO4E .index__lt___2cxRz{background-position:-5em -.625em}.index__message_row___2WgQt.index__other___2ZWzV .index__message_wrap___1CpvP .index__hide_border___3xNxn .index__border_icon___16zjo{display:none}.index__message_row___2WgQt.index__other___2ZWzV .index__audio_icon___wRU0P{-webkit-transform:rotate(0);transform:rotate(0)}.index__message_row___2WgQt.index__other___2ZWzV .index__audio_content___3YS28{text-align:right}.index__message_row___2WgQt.index__other___2ZWzV .index__audio_time___2PFyv{right:1.625em}.index__message_system_box___3wo7Q{margin-top:1.5em;text-align:center}.index__message_system_box___3wo7Q .index__message_system_wrap___1ylrA{display:inline-block;max-width:13.9em;min-height:1.375em;color:#666;background:rgba(0,0,0,.3);margin:.3125em auto;padding:.3125em 1.25em;border-radius:1.5625em;text-align:center;line-height:.75em}.index__message_system_box___3wo7Q .index__message_system_wrap___1ylrA .index__message_system___qeAYd{color:#ebebeb;font-weight:300;font-size:.75em;line-height:1.5em}.index__message_system_box___3wo7Q .index__message_system_wrap___1ylrA .index__message_system___qeAYd a{text-decoration:none}.index__upload_error___sPD9V{font-size:.75em;color:#f2694a;text-align:center}.index__upload_error___sPD9V .index__error_icon___1IVit{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABq0lEQVRYR+2VPW7CQBCF31CAgmSbnCQ5AnSBJuQEkC5QwQ3gBCGNSQe5ATQmHT5CchMwElFS8CIvBhlLsAtBIoW3snfHM5/f/KzgwksuHB8pQKpAqsDRCiye7orMZGoEqgIUwjYmMBPSF/LFen33j2ltYwC2ioXF99UAItWDAUjfyn09SM+fmYAYAYTBg5/8VIBbE6cEPuzssmQCYQQQNCsjAPcmwbc2pG/3JyXdN1qAKOfTjSMCXZAzEXmOOyfZDt/j+7JalXQ1oQUIGuUhRGpbALLt9Ce9oFmpAxhE+4+26w3njXIrATa2Xe9gzWgB5o1y+LdOQkoVMIJA7HkDpMzD7nBc7/pQGrQAQbPCPQ4URHiWUGPH3Ha9gzH+P8CfUkDOnf5EDat9S69AsgiBruN6HaMiJN/s/iQs1tMBkm2IcOSK+AQ6O20ItDJAIb5/ljZURZZQQTdconNtC6q5YeJsfQ/kfQhuTOxBfFq5ZfFso1j19Poy6sWH0h6YsZVd1k2CGysQD6RqQqSuruNoQJGcCzAScqgbvUlooxQYyX6iUQqQKpAqcHEFfgEmxcch78vUXQAAAABJRU5ErkJggg==) no-repeat;display:inline-block;background-size:1.4375em;width:1.1875em;height:1.125em}.index__rating___15M89{height:15.375em;width:17.125em;box-sizing:border-box;padding:1em;background:#f5f5f5;border:.0625em solid #c3c3c3;border-radius:.875em}.index__rating___15M89 .index__rating_title___ofCOa{font-size:1em;color:#5c5c5c;margin-bottom:1em}.index__rating___15M89 .index__rating_btn___3Ffm3{display:-webkit-box;display:-ms-flexbox;display:flex;margin-bottom:1em;height:2.3125em;font-size:.875em;color:#777;cursor:pointer}.index__rating___15M89 .index__rating_btn___3Ffm3 .index__rating_btn_common___3JM7D{line-height:2.3125em;background-size:100% 100%;height:100%;text-align:center;text-indent:1.25em}.index__rating___15M89 .index__rating_btn___3Ffm3 .index__rating_good___2BgIZ{width:7.375em;background-image:url(https://static.codemao.cn/mobile/chat/Group4.png);background-repeat:no-repeat;margin-right:1.125em}.index__rating___15M89 .index__rating_btn___3Ffm3 .index__rating_good_click___TbK8I{background-repeat:no-repeat;color:#852f21;background-image:url(https://static.codemao.cn/mobile/chat/Group1.png)}.index__rating___15M89 .index__rating_btn___3Ffm3 .index__rating_bad___3aOLh{width:9em;background-repeat:no-repeat;background-image:url(https://static.codemao.cn/mobile/chat/Group3.png)}.index__rating___15M89 .index__rating_btn___3Ffm3 .index__rating_bad_click___2uifi{background-repeat:no-repeat;color:#852f21;background-image:url(https://static.codemao.cn/mobile/chat/Group2.png)}.index__rating___15M89 .index__rating_comment_container___2q1Pk{position:relative;width:100%;height:4.75em;margin-bottom:1.5625em}.index__rating___15M89 .index__rating_comment_container___2q1Pk .index__rating_texterea___1MzwC{height:100%;width:100%;resize:none;background:#f1efef;border:.0625em solid #e3e3e3;border-radius:.1875em;outline:0;padding-bottom:1.25em}.index__rating___15M89 .index__rating_comment_container___2q1Pk .index__rating_word_num___eex-E{position:absolute;right:1.25em;bottom:0;font-size:.75em;color:#acacac}.index__rating___15M89 .index__rating_submit___2RhY2{width:6.75em;height:2em;line-height:2em;text-align:center;background:#4ac4f2;color:#fff;float:right;cursor:pointer}.index__rating___15M89 .index__not_rating_submit___5Q6At{background:#c2c2c2}</style><style type="text/css">.index__preview_image_wrapper___2Ycl-{position:fixed;left:0;right:0;bottom:0;top:0;z-index:10000;background:rgba(0,0,0,.64);overflow-y:hidden}.index__preview_image_wrapper___2Ycl- .index__preview_image___39PVY{display:block;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:80%;max-height:80%}</style><style type="text/css">@-webkit-keyframes index__step1___2Vlqg{0%{-webkit-transform:translate(0);transform:translate(0)}50%{-webkit-transform:translate(.9375em,.9375em);transform:translate(.9375em,.9375em)}to{-webkit-transform:translate(0);transform:translate(0)}}@keyframes index__step1___2Vlqg{0%{-webkit-transform:translate(0);transform:translate(0)}50%{-webkit-transform:translate(.9375em,.9375em);transform:translate(.9375em,.9375em)}to{-webkit-transform:translate(0);transform:translate(0)}}@-webkit-keyframes index__step2___lQ7SL{0%{-webkit-transform:translate(0);transform:translate(0)}50%{-webkit-transform:translate(-.9375em);transform:translate(-.9375em)}to{-webkit-transform:translate(0);transform:translate(0)}}@keyframes index__step2___lQ7SL{0%{-webkit-transform:translate(0);transform:translate(0)}50%{-webkit-transform:translate(-.9375em);transform:translate(-.9375em)}to{-webkit-transform:translate(0);transform:translate(0)}}.index__screenshot_wrap___-0SfA{position:fixed;left:0;right:0;top:0;bottom:0;z-index:10000;background:rgba(0,0,0,.64);overflow:hidden;font-size:1em;color:#fff}.index__screenshot_wrap___-0SfA .index__screenshot_step1___5I_XM{position:absolute;left:12.125em;top:1.0625em}.index__screenshot_wrap___-0SfA .index__screenshot_step1___5I_XM div{margin-left:-2.1875em;margin-top:1.25em}.index__screenshot_wrap___-0SfA .index__screenshot_step1___5I_XM img{display:block;-webkit-animation:index__step1___2Vlqg 1.5s infinite;animation:index__step1___2Vlqg 1.5s infinite}.index__screenshot_wrap___-0SfA .index__screenshot_step2___UETr3{position:absolute;right:23.9375em;bottom:2.5em;display:-webkit-box;display:-ms-flexbox;display:flex}.index__screenshot_wrap___-0SfA .index__screenshot_step2___UETr3 img{margin-left:2.125em;-webkit-animation:index__step2___lQ7SL 1s infinite;animation:index__step2___lQ7SL 1s infinite}.index__screenshot_wrap___-0SfA .index__screenshot_step2___UETr3 div{width:23.75em;margin-top:1.9375em}.index__screenshot_wrap___-0SfA .index__screenshot_step2___UETr3 span{margin-top:2.125em}.index__screenshot_wrap___-0SfA .index__s3_lesson___O4yNu{right:47.875em}.index__screenshot_wrap___-0SfA span{width:1em;height:1em;margin-right:.625em;line-height:1em;text-align:center;font-weight:1000;display:inline-block;background:#ffde1c;color:rgba(0,0,0,.64);border-radius:1em}.index__screenshot_wrap___-0SfA .index__close_wrap___Fcwo0{position:absolute;right:1.875em;top:1.875em;border-radius:50%;width:2.875em;height:2.875em;text-align:center;line-height:2.875em;box-sizing:border-box;background:rgba(0,0,0,.3)}</style><style type="text/css">.index__certificate_wrapper___13f6D{position:fixed;left:0;right:0;bottom:0;top:0;z-index:10000;background:rgba(0,0,0,.64);overflow-y:hidden}.index__certificate_wrapper___13f6D .index__canvas___2EzmF{display:block;position:absolute;top:45%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:80%;max-height:80%}.index__certificate_wrapper___13f6D .index__download___33EOT{width:18.75em;height:2.5em;background-color:#29b6f6;border-radius:1.625em;text-align:center;display:block;line-height:2.5em;text-decoration:none;color:#fff;margin:0 auto;cursor:pointer;position:absolute;top:90%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.index__spinner___12nTn{margin:6.25em auto 0;width:4.375em;text-align:center}.index__spinner___12nTn>div{width:1.125em;height:1.125em;background-color:#fff;border-radius:100%;display:inline-block;-webkit-animation:index__sk-bouncedelay___2fdOc 1.4s infinite ease-in-out both;animation:index__sk-bouncedelay___2fdOc 1.4s infinite ease-in-out both}.index__spinner___12nTn .index__bounce1___1d2aQ{-webkit-animation-delay:-.32s;animation-delay:-.32s}.index__spinner___12nTn .index__bounce2___3EcKM{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes index__sk-bouncedelay___2fdOc{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes index__sk-bouncedelay___2fdOc{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}</style><style type="text/css">.index__main___7Zuln{height:100%;padding:.8em;padding-bottom:3.75em;overflow-y:scroll;position:relative;background-size:100% auto;background-repeat:no-repeat;background-color:#333}.index__main___7Zuln::-webkit-scrollbar{display:none}.index__web_im___1_d-Z{position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;text-align:center;left:0;right:0;top:0;bottom:0;background:#404040;z-index:9999;color:#fff}.index__web_im___1_d-Z .index__web_mlz_container___bPFk_{display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:60%}.index__web_im___1_d-Z .index__web_mlz_container___bPFk_ img{height:6.25em;width:6.25em}.index__web_im___1_d-Z .index__web_mlz_container___bPFk_ div{position:absolute;-webkit-animation:index__first_step___Cd97q 2s infinite;animation:index__first_step___Cd97q 2s infinite;background:transparent;box-sizing:border-box;border:.0625em solid #606060;border-radius:100%}.index__web_im___1_d-Z .index__web_mlz_container___bPFk_ .index__second_step___2j8D3{-webkit-animation-name:index__second_step___2j8D3;animation-name:index__second_step___2j8D3;-webkit-animation-delay:.5s;animation-delay:.5s}.index__web_im___1_d-Z .index__web_im_btn___b4i5f{margin-top:1.25em;display:-webkit-box;display:-ms-flexbox;display:flex}.index__web_im___1_d-Z .index__web_im_btn___b4i5f,.index__web_im___1_d-Z .index__web_im_btn___b4i5f div{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.index__web_im___1_d-Z .index__web_im_btn___b4i5f div{display:inline-block;width:6.75em;height:2.25em;margin-right:1.25em;border-radius:1.5625em;display:-webkit-box;display:-ms-flexbox;display:flex;cursor:pointer}.index__web_im___1_d-Z .index__web_im_btn___b4i5f div span{display:inline-block;width:1.6875em;height:1.875em;background:url("https://static.codemao.cn/mlz/icon/icon.svg") no-repeat}.index__web_im___1_d-Z .index__web_im_btn___b4i5f .index__web_reject___12tJ1{background-color:#f8826d}.index__web_im___1_d-Z .index__web_im_btn___b4i5f .index__web_reject___12tJ1 span{background-position:-4.6875em -5.1875em}.index__web_im___1_d-Z .index__web_im_btn___b4i5f .index__web_accect___3z4wR{background-color:#91d053;margin-left:.625em}.index__web_im___1_d-Z .index__web_im_btn___b4i5f .index__web_accect___3z4wR span{background-position:-6.9375em -5.3125em}.index__web_im_chating___3NWLq{position:relative;z-index:10000;display:-webkit-box;display:-ms-flexbox;display:flex;background:#ecf9ff;width:100%;height:2.25em;font-size:.875em;color:#525252;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.index__web_im_chating___3NWLq .index__web_im_chating_icon___1AzuB{width:1.6875em;height:1.0625em;background:url("https://static.codemao.cn/mlz/icon/icon.svg") no-repeat;background-position:-6.6875em -3.6875em}.index__web_im_chating___3NWLq .index__web_im_shotdown___1EW77{background:#ff7667;width:4em;height:1.4375em;line-height:1.4375em;border-radius:.8125em;color:#fff;margin-right:.875em;text-align:center;cursor:pointer}@-webkit-keyframes index__first_step___Cd97q{0%{width:6.25em;height:6.25em}to{width:12.5em;height:12.5em}}@keyframes index__first_step___Cd97q{0%{width:6.25em;height:6.25em}to{width:12.5em;height:12.5em}}@-webkit-keyframes index__second_step___2j8D3{0%{width:6.25em;height:6.25em}to{width:12.5em;height:12.5em}}@keyframes index__second_step___2j8D3{0%{width:6.25em;height:6.25em}to{width:12.5em;height:12.5em}}</style><style type="text/css">.ps-container{-ms-touch-action:auto;touch-action:auto;overflow:hidden!important;-ms-overflow-style:none}@supports (-ms-overflow-style:none){.ps-container{overflow:auto!important}}@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active){.ps-container{overflow:auto!important}}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block;background-color:transparent}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;opacity:0;transition:background-color .2s linear,opacity .2s linear;bottom:0;height:15px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;border-radius:6px;transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;bottom:2px;height:6px}.ps-container>.ps-scrollbar-x-rail:active>.ps-scrollbar-x,.ps-container>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{height:11px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;opacity:0;transition:background-color .2s linear,opacity .2s linear;right:0;width:15px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;border-radius:6px;transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;right:2px;width:6px}.ps-container>.ps-scrollbar-y-rail:active>.ps-scrollbar-y,.ps-container>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{width:11px}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}</style><style type="text/css">.index__chat___1Z8N5{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;position:absolute;overflow:hidden;width:100%}.index__chat___1Z8N5 a{text-decoration:none}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_hide_btn___1rKbB>i.index__toolbox_hide_icon___2dVYV,.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_open_btn___26eij>i.index__toolbox_open_icon___1mQWL,.index__chat___1Z8N5 .index__chat_title___1AtCK .index__close_icon___2aNKr,.index__chat___1Z8N5 .index__icon___2jLpv{display:inline-block;background-image:url(https://static.codemao.cn/mobile/chat/mlz_icon.svg);background-repeat:no-repeat}.index__chat___1Z8N5 .index__chat_title___1AtCK{z-index:1000;position:relative;height:2.5em;line-height:2.5em;width:100%;padding:0 1.25em;color:#fff;font-weight:300;background:#54afff;box-shadow:inset 0 -.0625em 0 rgba(0,0,0,.15)}.index__chat___1Z8N5 .index__chat_title___1AtCK .index__close_icon___2aNKr{cursor:pointer;position:absolute;top:.8125em;right:1.25em;width:.875em;height:.875em;background-position:-16.25em -.75em}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs{z-index:1000;position:relative;width:100%;background-color:#fff}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8{cursor:pointer;position:absolute;top:-2.5em;left:.625em}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_open_btn___26eij{display:none;width:6.25em;background:hsla(0,0%,100%,.4);border-radius:.25em;color:#545e66;padding:.28125em .5em}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_open_btn___26eij>i.index__toolbox_open_icon___1mQWL{width:1.25em;height:.875em;margin-right:.3125em;vertical-align:middle;background-position:-16.125em -3.0625em}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_open_btn___26eij>span.index__open_tips___H9d1Y{font-size:.875em;vertical-align:middle}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_open_btn___26eij:hover{background-color:hsla(0,0%,100%,.6)}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_hide_btn___1rKbB{display:none;width:1.875em;background:hsla(0,0%,100%,.4);line-height:1.875em;border-radius:.25em;text-align:center}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_hide_btn___1rKbB>i.index__toolbox_hide_icon___2dVYV{background-position:-11.75em -3.125em;width:1.125em;height:.8125em}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__toolbox_hide_btn___1rKbB:hover{background-color:hsla(0,0%,100%,.6)}.index__chat___1Z8N5 .index__bottom_wrap___3pZOs .index__toolbox_control_wrap___2fQ-8 .index__active___3xTEs{display:block}.index__chat___1Z8N5 .index__fadeOutIn___3PO-D{-webkit-animation:index__fadeOutIn___3PO-D .5s;animation:index__fadeOutIn___3PO-D .5s}@-webkit-keyframes index__fadeOutIn___3PO-D{0%{opacity:1}50%{opacity:.7}to{opacity:1}}@keyframes index__fadeOutIn___3PO-D{0%{opacity:1}50%{opacity:.7}to{opacity:1}}</style><style type="text/css">.style__mlz_box___2-mQB{position:absolute;z-index:65;right:.9375em;bottom:.9375em;width:21.875em;height:40.0625em;background:#fff;box-shadow:0 0 .625em 0 rgba(110,88,30,.15);border-radius:.125em;box-sizing:border-box;max-height:95%}.style__mlz_box___2-mQB *{box-sizing:inherit}.style__mlz_wrapper___2mD6M{height:100%;background:#fff;border-radius:.125em}.style__chat_wrapper___E1g5-{position:relative;overflow:hidden;width:100%;height:100%;border-radius:.125em;background:#333}.style__mlz-loading-box___3HKAS{overflow:hidden;width:100%;height:100%;background:#333;border:.0625em solid #e6e6e6;border-radius:.125em}.style__mlz-loading-content___14b7k{position:relative;width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.style__mlz-btn-close___258gu{cursor:pointer;position:absolute;top:.3125em;right:.3125em;background:url("https://static.codemao.cn/kitten/ide-icons-new.svg") no-repeat -16.6875em -15.3125em;width:.9375em;height:.9375em}.style__icon-close___26iea:hover{background:url("https://static.codemao.cn/kitten/ide-icons-new.svg") no-repeat -17em -21.875em}.style__main-image___6RQS5{margin-bottom:2.5em;background:url("https://static.codemao.cn/mlz/student/loading.gif") no-repeat;background-size:100% 100%;width:13.5em;height:13.5em}.style__change_btn___3uBTG{margin-top:1.25em;width:7.5em;height:2.25em;background:#6ba1f4;border-radius:.125em;font-size:.875em;line-height:2.25em;margin-left:.9375em}.style__main-text___G62fw{color:#fff;text-align:center}.style__text-title___3CTaz{margin-bottom:1.25em;font-size:1em;line-height:1.125em;color:#fff}.style__text-tips___33zHu{max-width:18.75em;-webkit-animation:style__opacity___3-Z3I .3s;animation:style__opacity___3-Z3I .3s}.style__text-tips-item___nMVEo{display:inline-block;width:100%;font-size:.875em;line-height:1.25em;font-weight:400}.style__problem-solution___2s0R5{color:#14c0fb;font-weight:700}.style__problem-solution___2s0R5:hover{text-decoration:underline}@-webkit-keyframes style__ripple___3FZAm{0%{background-position:0 0}to{background-position:-78.75em 0}}@keyframes style__ripple___3FZAm{0%{background-position:0 0}to{background-position:-78.75em 0}}@-webkit-keyframes style__opacity___3-Z3I{0%{opacity:0}to{opacity:1}}@keyframes style__opacity___3-Z3I{0%{opacity:0}to{opacity:1}}</style><style type="text/css">.style__button_text___2aMyq{width:6.5em;height:3.375em;margin:auto;font-size:.75em;color:#776955;letter-spacing:.05375em;line-height:1em;background:#fff;border:.0625em solid #f2e7c9;padding:.625em .75em;float:left;position:absolute;bottom:1.4375em;right:8.75em;display:none;z-index:60;line-height:1.25em;box-sizing:content-box}.style__go-to-school-image___2fQeV{cursor:pointer;position:absolute;z-index:20;right:1.25em;bottom:.9375em;box-sizing:content-box}.style__go-to-school-image___2fQeV img{width:5em;height:5em;float:right;-webkit-filter:drop-shadow(0 0 .3125em rgba(211,160,94,.7));filter:drop-shadow(0 0 .3125em rgba(211,160,94,.7))}.style__go-to-school-image___2fQeV:hover{-webkit-filter:drop-shadow(0 0 10em rgba(211,160,94,.7));filter:drop-shadow(0 0 10em rgba(211,160,94,.7))}.style__go-to-school-image___2fQeV:hover+.style__button_text___2aMyq{display:block}.style__go-to-school-image___2fQeV:active+.style__button_text___2aMyq{display:none}.style__go-to-school-image___2fQeV:active{-webkit-filter:drop-shadow(0 0 .3125em rgba(211,160,94,.7));filter:drop-shadow(0 0 .3125em rgba(211,160,94,.7))}.style__unread_num___3dqJ5{position:absolute;bottom:5em;text-align:center;background:#f79190;color:#fff;border-radius:1.25em;padding:.1875em;right:3.75em;width:5em;z-index:20;font-size:.75em;font-weight:200}.style__hidden___3GRTp{visibility:hidden}.style__web_im___3fcTE{position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;height:5.25em;box-sizing:border-box;width:18.3125em;background:#fff;border:.0625em solid #eee1c6;box-shadow:0 .125em .375em 0 rgba(146,109,0,.2);left:-13.25em;top:-5.375em;border-radius:.25em}.style__web_icon___2NBmo{width:5.125em;height:100%;background-color:#f7f7f7;background-image:url("https://static.codemao.cn/mlz/image/phone.gif");background-repeat:none;background-size:100%}.style__web_btn_container___1GY8l{-webkit-box-flex:1;-ms-flex:1;flex:1;font-size:.875em;padding:.625em}.style__web_btn_ground___2lupI{margin-top:.625em;text-align:center}.style__web_btn_ground___2lupI div{display:inline-block;height:1.75em;width:5em;border-radius:1.25em;color:#fff;line-height:1.75em}.style__web_btn_ground___2lupI div:first-child{background-color:#f8826d;margin-right:1.25em}.style__web_btn_ground___2lupI div:nth-child(2){background-color:#91d053}.style__web_chating___2w0qI{position:absolute;left:-2.5em;top:-1.875em;height:2.3125em;width:8.75em;background:#a0e75a;border-radius:.1875em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:.75em;color:#48535b}</style><link type="text/css" rel="stylesheet" href="blob:https://ide.codemao.cn/b648d404-a825-41ad-9009-567e8da0e78f"><link type="text/css" rel="stylesheet" href="blob:https://ide.codemao.cn/5c0944fd-4486-44cb-badc-065b6ad7c547"><link type="text/css" rel="stylesheet" href="blob:https://ide.codemao.cn/c24194f1-5f5e-4694-b25b-f2ef58622ce2"><link type="text/css" rel="stylesheet" href="blob:https://ide.codemao.cn/ed583e4c-6224-4485-b357-3ccb77e3f716"><script type="text/javascript" charset="utf-8" async="" src="./cm_files/0.4b4ba816631f0c0a3686.js"></script><style>@font-face {font-family: "Herkules"; src: url("https://static.codemao.cn/kitten/Herkules.ttf");}</style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="事件"] {
+            border-color: #6388F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="事件"][aria-selected="true"] {
+            background-color: #6388F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="事件"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -24px -2px;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="事件"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -50px -2px;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="控制"] {
+            border-color: #68CDFF;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="控制"][aria-selected="true"] {
+            background-color: #68CDFF;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="控制"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -24px -28px;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="控制"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -50px -28px;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="动作"] {
+            border-color: #EE5858;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="动作"][aria-selected="true"] {
+            background-color: #EE5858;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="动作"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -24px -54px;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="动作"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) no-repeat -50px -54px;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="外观"] {
+            border-color: #EE61F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="外观"][aria-selected="true"] {
+            background-color: #EE61F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="外观"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -80px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="外观"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -80px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="声音"] {
+            border-color: #A961F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="声音"][aria-selected="true"] {
+            background-color: #A961F1;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="声音"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -106px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="声音"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -106px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="画笔"] {
+            border-color: #5BE3C5;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="画笔"][aria-selected="true"] {
+            background-color: #5BE3C5;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="画笔"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -132px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="画笔"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -132px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="侦测"] {
+            border-color: #77E354;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="侦测"][aria-selected="true"] {
+            background-color: #77E354;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="侦测"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -158px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="侦测"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -158px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="运算"] {
+            border-color: #FBBDA2;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="运算"][aria-selected="true"] {
+            background-color: #FBBDA2;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="运算"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -184px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="运算"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -184px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="数据"] {
+            border-color: #F5B768;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="数据"][aria-selected="true"] {
+            background-color: #F5B768;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="数据"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -210px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="数据"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -210px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="函数"] {
+            border-color: #F08F63;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="函数"][aria-selected="true"] {
+            background-color: #F08F63;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="函数"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -236px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="函数"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -236px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="物理"] {
+            border-color: #E45D5A;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="物理"][aria-selected="true"] {
+            background-color: #E45D5A;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="物理"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -24px -262px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="物理"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/ide-icons-latest.svg) -50px -262px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="AI"] {
+            border-color: #5F47E0;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="AI"][aria-selected="true"] {
+            background-color: #5F47E0;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="AI"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/toolbox_ai_icon.svg) -2px -2px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="AI"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/toolbox_ai_icon.svg) -28px -2px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="云端"] {
+            border-color: #E88C30;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="云端"][aria-selected="true"] {
+            background-color: #E88C30;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="云端"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/toolbox_cloud_icon.svg) -2px -2px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="云端"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/toolbox_cloud_icon.svg) -28px -2px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style><style type="text/css">
+          .blocklyToolboxDiv [role="treeitem"][category-name="Arduino"] {
+            border-color: #1CB0B8;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="Arduino"][aria-selected="true"] {
+            background-color: #1CB0B8;
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="Arduino"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/hardware_arduino_icons.svg) -32px -2px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+
+          .blocklyToolboxDiv [role="treeitem"][category-name="Arduino"][aria-selected="true"] .blocklyTreeIcon {
+
+        background: url(https://static.codemao.cn/kitten/blocks/hardware_arduino_icons.svg) -32px -30px no-repeat;
+        width: 24px;
+        height: 24px;
+
+          }
+        </style></head>
+<body>
+  <div id="root"><div data-reactroot="" class="container_17gkE"><header class="header_1M9Aj"><div class="header_left_1_BNt"><nav class="btn_home_3aW4M"><div class="btn_home__icon_a3g3U"></div><div class="btn__hint_3sWIy"><span>首页</span></div></nav><div class="btn_file_8iCgo"><div class="btn_file__icon_2TtJM"></div><div class="btn_file__text_27jc-"><span>文件</span></div><div class="btn_file__dropdown_7fgM7"><div class="btn_file__dropdown__btn_1B4IK"><span>打开</span></div><div class="btn_file__dropdown__btn_1B4IK"><span>新建</span></div><div class="btn_file__dropdown__btn_1B4IK"><span>另存为</span></div><div class="btn_file__dropdown__btn_1B4IK"><span>保存到本地</span></div><div class="btn_file__dropdown__btn_1B4IK"><span>打开本地作品</span></div><input type="file" name="local_project_file" class="local_project_file_1hpjn"><div class="btn_file__dropdown__btn_1B4IK"><span>导出exe格式/安卓app</span></div></div></div><div class="btn_stage_bhreW"><div class="btn_stage_icon_1mjLi"></div><span>舞台</span><div class="btn_stage_dropdown_sn3sN"><div class="btn_stage_dropdown_btn_2Sr5n"><span>竖版</span></div><div class="btn_stage_dropdown_btn_2Sr5n"><span>横版4:3</span></div><div class="btn_stage_dropdown_btn_2Sr5n"><span>横版16:9</span></div></div></div><div class="btn_save_1hd5e"><div class="btn_save__icon_27nAN"></div><div class="btn__text_2Wjer"><span>保存</span></div></div><div class="project_name_1RN-D"><div class="project_name__text_wrap_3GNYK"><input maxlength="30" value="春暖花开" class="project_name__text_wrap__input_2zYWm"></div><div class="project_name__icon-pencil_2g5nI"></div></div><!-- react-text: 44 --><!-- /react-text --><!-- react-text: 45 --><!-- /react-text --><div class="btn_publish_1ulkw"><div class="btn_publish__icon_3WqpQ"></div><span>发布</span></div></div><div class="header_right_2-uYH"><span class="btn_add_hardware_3oA10"><img src="./cm_files/hardware_leidianhou_2c765.gif" class="btn_hardware__icon_3Nmgx"><div class="hardware_selection_wrap_sRrU4"><ul><li class="hardware_item_2EQpl"><span>添加硬件</span><div class="hardware_icon_3sARs" style="background: url(&quot;https://static.codemao.cn/kitten/asset/hardware_arduino_icons_fbae2.svg&quot;) -70px -2px no-repeat;"></div></li><!-- react-text: 57 --><!-- /react-text --><li class="hardware_item_2EQpl"><span>下载编程猫硬件助手</span><div class="hardware_icon_3sARs" style="background: url(&quot;https://static.codemao.cn/kitten/asset/hardware_arduino_icons_fbae2.svg&quot;) -70px -20px no-repeat;"></div></li><li class="hardware_item_inactive_2GFR3"><span>召唤雷电猴（敬请期待...）</span><div class="hardware_icon_3sARs" style="background: url(&quot;https://static.codemao.cn/kitten/asset/hardware_arduino_icons_fbae2.svg&quot;) -70px -38px no-repeat;"></div></li></ul></div></span><div class="btn_lab_CxWBB"><div class="btn_show_lab__icon_hm6pu"></div><div class="btn__hint_3sWIy"><span>积木实验室</span></div></div><span class="btn_convert_code_2sg4C"><div class="btn_blockly_icon_3dsSP"></div><div class="language_selection_wrap_BZFJJ"><ul><li class="language_item_3gOK-">积木</li><li class="language_item_3gOK-">Python</li><li class="language_item_3gOK-">JavaScript</li></ul></div></span><div class="btn_share_to_phone_2NYyF"><div class="btn_share_to_phone__icon_1md2w"></div><div class="btn__hint_3sWIy"><span>扫一扫</span></div></div><div class="btn_print_pdf_3OPpG"><div class="btn_print_pdf__icon_32FQo"></div><div class="btn__hint_3sWIy"><span>生成教案</span></div></div><span class="btn_package_1-_2J"><div class="btn_package__icon_sK-tD"></div><div class="btn__hint_3sWIy"><span>背包</span></div></span><span class="btn_help_book_NNyd-"><div class="btn_help_book_icon_1DEWN"></div><div class="btn__hint_3sWIy"><span>帮助</span></div></span><span class="btn_language_2y0du"><div class="btn_language_icon_1GTuh"></div><div class="btn_language_dropdown_5SQ1y"><div class="btn_language_dropdown_btn_15r_r"><span>简体中文</span></div><div class="btn_language_dropdown_btn_15r_r"><span>繁體中文</span></div><div class="btn_language_dropdown_btn_15r_r"><span>English</span></div></div></span><div class="user_wrap_5Yeei"><div class="user_display_1K1Il"><img src="./cm_files/default_display_0d3e4.png" class="user_display__img_1mhFH"></div><div class="user-name-wrap name_wrapper_1mTTL"><div class="name_wrapper__user_name_KHnL0"><span>未登录</span></div><div class="name_wrapper__drop_icon_2dUFW"></div><!-- react-text: 107 --><!-- /react-text --></div></div></div></header><div><div class="protect_eyes_set_3lBix"><div class="close_btn_swSAS"></div><header class="header_1UzJi"><i class="mao_icon_133MZ"></i><span>编程猫护眼贴士</span></header><div class="setting_area_3R9fn"><span>护眼模式：每</span><span class="hour_3zrKF">1</span><span>小时休息</span><input type="text" maxlength="1" class="minute_2JgL0" value="5"><span>分钟</span></div><div class="eye_protect_btn_2-zJF"><span>开启护眼</span><span class="toggle_btn_wrapper_2Xatv"><span class="toggle_btn_2dBNB"></span></span></div></div><div class="protect_eyes_ready_3FThn"><header class="header_1UzJi"><i class="mao_icon_133MZ"></i><span>编程猫护眼贴士</span></header><div class="count_main_3xf0s"><div class="suggestion_e3g5K"><p><!-- react-text: 131 -->＊<!-- /react-text --><span>打开窗户望望远景，绿树</span></p><p><!-- react-text: 134 -->＊<!-- /react-text --><span>眼保健操</span></p><p><!-- react-text: 137 -->＊<!-- /react-text --><span>多眨眼</span></p></div></div><p class="remain_time_prompt_28_EA"><!-- react-text: 140 -->15<!-- /react-text --><span>秒后开始休息</span></p><div class="count_ft_3FTnJ"><div class="setting_btn_2GfuI"><span>设置</span></div><div class="rest_btn_37iqi"><span>立即休息</span></div></div></div><div class="rest_wrap_1ahcB"><div class="protect_eyes_rest_2Osm9"><header class="header_1UzJi"><i class="mao_icon_133MZ"></i><span>编程猫护眼贴士</span></header><div class="rest_main_2QNw1"><div class="suggestion_e3g5K"><p><!-- react-text: 155 -->＊<!-- /react-text --><span>打开窗户望望远景，绿树</span></p><p><!-- react-text: 158 -->＊<!-- /react-text --><span>眼保健操</span></p><p><!-- react-text: 161 -->＊<!-- /react-text --><span>多眨眼</span></p></div><div class="needed_time_prompt_3PfVn"><div class="needed_time_number_1fIE0">00:00</div><div class="needed_time_text_97RCf"><span>你还需休息</span></div></div></div><div class="quit_btn_1UWlG"><span>退出</span></div></div></div></div><input class="hack_input_VCqbY"><div class="content_1qrYS"><div id="content_left" class="content_left_1YW-z"><div id="content_left_top" class="content_left_top_1Ulk3"><!-- react-empty: 173 --><div class="stage_4eB1E" style="height: 732px; width: 482.222px;"><div class="main_1CDVe"><div class="diagram_container_3ZJoL" style="top: 0px;"></div><div id="theater-panel" class="player_Kc7X8"><div class="ask-wrap ask-wrap_16Iqt"><input class="ask-input ask-input_3Lwu_"><span class="ask-confirm ask-confirm_R2yq8"><span>确定</span></span></div><canvas width="620" height="900" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 482.222px; height: 700px; cursor: inherit;"></canvas></div></div><div class="footer_3PJxD"><div id="btn_trigger" class="btn-trigger_SNhbK start_uKHpR"><i class="btn-icon_gSNNJ"></i><span>开始</span></div><div class="blank_d2TDP"></div><div class="btn_full_screen_29Sya"></div><div class="btn-grid_2sX0t"></div></div></div></div><!-- react-text: 189 --><!-- /react-text --><!-- react-text: 190 --><!-- /react-text --></div><div id="content-right" class="content_right_3cupD"><div class="code_panel_container_1Cl5B"><div class="block_space_3mI01"><div class="block-value"><div class="value-text"></div><div class="block-value-bubble"></div></div><div class="block-device-option" style="display: none;"><div class="block-device-option-item-link" id="block-device-option-item"><span>连接设备</span></div><div class="block-device-option-item-unlink" id="block-device-option-item"><span>断开设备</span></div><div class="block-device-option-item-delete" id="block-device-option-item"><span>删除设备</span></div></div><div id="blockly-trashcan" class="blockly-trashcan" style="width: 116px;"><i class="trashcan-cover-icon"></i><i class="trashcan-body-icon"></i></div><div class="mask_28Z_s"><i class="running_icon_jZRUD"></i><span>积木运行中，点击停止</span></div><div id="workspace" class="blockly_workspace_3u_sv" style="width: 1431.78px; height: 702px;"><div class="injectionDiv" dir="LTR"><div class="blocklyToolboxDiv" dir="LTR" style="left: 0px; height: 702px;"><div class="blocklyTreeRoot" id=":0" role="tree" aria-selected="false" aria-level="0" aria-labelledby=":0.label" hidefocus="true" tabindex="0" aria-expanded="true"><div class="blocklyTreeRow blocklyHidden" style="padding-left:0px;"><span style="display:inline-block;" class="" role="presentation"></span><span class="blocklyTreeLabel" id=":0.label"></span><span></span></div><div style="background-position: -100px 0px;" role="group"><div class="" id=":d" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":d.label" category-name="事件"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":d.label">事件</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":e" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":e.label" category-name="控制"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":e.label">控制</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":f" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":f.label" category-name="动作"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":f.label">动作</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":g" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":g.label" category-name="外观"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":g.label">外观</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":h" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":h.label" category-name="声音"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":h.label">声音</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":i" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":i.label" category-name="画笔"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":i.label">画笔</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":j" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":j.label" category-name="侦测"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":j.label">侦测</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":k" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":k.label" category-name="运算"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":k.label">运算</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":l" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":l.label" category-name="数据"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":l.label">数据</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":m" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":m.label" category-name="函数"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation" class="blocklyTreeIcon blocklyTreeIconNone blocklyTreeIconNone"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":m.label">函数</span><span></span></div><div style="background-position: 0px 0px; display: none;" role="group"></div></div><div class="" id=":n" role="treeitem" aria-selected="false" aria-level="1" aria-labelledby=":n.label" category-name="物理"><div class="blocklyTreeRow" style="padding-left: 0px; border-left: none;"><span role="presentation"></span><span style="display:inline-block;" class="blocklyTreeIcon blocklyTreeIconNone" role="presentation"></span><span class="blocklyTreeLabel" id=":n.label">物理</span><span></span></div><div style="background-position:-100px 0;display:none;" role="group"></div></div></div></div></div><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklySvg" width="1432px" height="702px"><defs><filter id="blocklyEmbossFilter77545237574205"><fegaussianblur in="SourceAlpha" stdDeviation="1" result="blur"></fegaussianblur><fespecularlighting in="blur" surfaceScale="1" specularConstant="0.5" specularExponent="10" lighting-color="white" result="specOut"><fepointlight x="-5000" y="-10000" z="20000"></fepointlight></fespecularlighting><fecomposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"></fecomposite><fecomposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"></fecomposite></filter><pattern id="blocklyDisabledPattern77545237574205" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="#aaa"></rect><path d="M 0 0 L 10 10 M 10 0 L 0 10" stroke="#cc0"></path></pattern><pattern id="blocklyGridPattern77545237574205" patternUnits="userSpaceOnUse" width="10" height="10" x="116.99999999999852" y="-41"><rect width="15" height="15" fill="#FFFBF2" stroke-width="1" x1="0" y1="0.5" x2="1" y2="0.5"></rect><circle cx="1" cy="1" r="1" fill="#F6EFDB" stroke-width="1" x1="0.5" y1="0" x2="0.5" y2="1"></circle></pattern></defs><g class="blocklyWorkspace"><rect height="100%" width="100%" class="blocklyMainBackground" style="fill: url(&quot;#blocklyGridPattern77545237574205&quot;);"></rect><g class="blocklyBlockCanvas" transform="translate(116.99999999999852,-41) scale(1)"><g class="blocklyDraggable" transform="translate(156,76)"><path class="blocklyPath" fill="#608FEE" stroke="#5680D5" stroke-opacity="1" stroke-width="1px" d="m 0,0 m 0,36a 22 22, 0, 1, 1, 15.556349186104043,-37.55634918610404C 20,0 20,0 30,0 H 100 H 138.890625 a 18 18 0,0,1 0,36 H 33.5 l -6,8 -8,0 -6,-8 z
+"></path><g class="blocklyDraggable" transform="translate(0,36)"><path class="blocklyPath" fill="#68CDFF" stroke="#56A2C9" stroke-opacity="1" stroke-width="1px" d="m 0,0 H 14 l 6,8 8,0 6,-8 H 54 H 126 a 18 18 0,0,1 0,36 H 54 l -6,8 -8,0 -6,-8 h -12 a 2,2 0 0,0 -2,2 v 68 a 2,2 0 0,0 2,2 H 34 l 6,8 8,0 6,-8 H 54 H 74 a  10 10 0,0,1 0,20 H 33.5 l -6,8 -8,0 -6,-8 H 2 a 2,2 0 0,1 -2,-2 z
+"></path><g class="blocklyDraggable" transform="translate(20.5,36.5)"><path class="blocklyPath" fill="#E76CEA" stroke="#CA52CD" stroke-opacity="1" stroke-width="1px" d="m 0,2 A 2,2 0 0,1 2,0 H 14 l 6,8 8,0 6,-8 H 44 H 146.4453125 a 18 18 0,0,1 0,36 H 33.5 l -6,8 -8,0 -6,-8 H 0 z
+"></path><g class="blocklyDraggable" transform="translate(0,36)"><path class="blocklyPath" fill="#68CDFF" stroke="#56A2C9" stroke-opacity="1" stroke-width="1px" d="m 0,0 H 14 l 6,8 8,0 6,-8 H 44 H 211.140625 a 18 18 0,0,1 0,36 H 33.5 l -6,8 -8,0 -6,-8 H 2 a 2,2 0 0,1 -2,-2 z
+"></path><g transform="translate(90,5.5)"><path class="blocklyPath" fill="#fffcfa" stroke="#fffcfa" stroke-opacity="0.1" stroke-width="2px" d="m 0,0 H 51.140625 a 15,12.5 0, 0, 1, 0,25 H 0 V 25 a 15,12.5 0, 0, 1, 0,-25 z
+"></path><g class="blocklyEditableText" transform="translate(10,4.5)" style="cursor: text;"><rect rx="4" ry="4" x="-5" y="0" height="16" width="41.140625"></rect><text class="blocklyText" y="8" dy=".4em">0.09</text></g></g><text class="blocklyText" y="8.75" dy=".4em" transform="translate(34,9.25)">等待</text><text class="blocklyText" y="8.75" dy=".4em" transform="translate(167.140625,9.25)">秒</text><g transform="translate(197.140625,4) scale(1)"><image height="28px" width="28px" class="blocklyTypeIcon" xlink:href="https://static.codemao.cn/kitten/blocks/block_control.svg"></image></g></g><text class="blocklyText" y="8.75" dy=".4em" transform="translate(34,9.25)">下一个&nbsp;造型</text><g transform="translate(132.4453125,4) scale(1)"><image height="28px" width="28px" class="blocklyTypeIcon" xlink:href="https://static.codemao.cn/kitten/blocks/block_appearance.svg"></image></g></g><text class="blocklyText" y="8.75" dy=".4em" transform="translate(34,9.25)">重复执行</text><g transform="translate(112,4) scale(1)"><image height="28px" width="28px" class="blocklyTypeIcon" xlink:href="https://static.codemao.cn/kitten/blocks/block_control.svg"></image></g></g><g transform="translate(-18,
+                  -4)"><image height="36px" width="36px" class="blocklyTypeIcon" xlink:href="https://static.codemao.cn/kitten/blocks/start.svg"></image></g><text class="blocklyText" y="8.75" dy=".4em" transform="translate(34,9.25)">当&nbsp;开始&nbsp;被点击</text></g></g><g class="blocklyBubbleCanvas" transform="translate(116.99999999999852,-41) scale(1)"></g><rect height="15" width="15" class="blocklyScrollbarBackground" x="1416.5" y="686.5"></rect></g></svg><svg class="blocklyScrollbarVertical blocklyMainWorkspaceScrollbar" width="15" height="686" style="transform: translate(1416.5px, 0.5px);"><g><rect class="blocklyScrollbarBackground" width="15" height="686"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" width="6" x="5" height="392.7993474714519" y="277.53344208809136"></rect></g></svg><svg class="blocklyScrollbarHorizontal blocklyMainWorkspaceScrollbar" height="15" width="1306" style="transform: translate(110.5px, 686.5px);"><g><rect class="blocklyScrollbarBackground" height="15" width="1306"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" height="6" y="5" width="725.1717670221493" x="495.2557703035283"></rect></g></svg><svg class="blocklyFlyout" style="display: none"><path class="blocklyFlyoutBackground"></path><g class="blocklyWorkspace"><g class="blocklyBlockCanvas"></g><g class="blocklyBubbleCanvas"></g></g></svg><svg class="blocklyScrollbarVertical blocklyFlyoutScrollbar" width="15"><g><rect class="blocklyScrollbarBackground" width="15"></rect><rect class="blocklyScrollbarHandle" rx="5" ry="5" width="6" x="5"></rect></g></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklyBlockDragSurface"><g transform="translate(117,-41) scale(1)"></g></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blocklyWsDragSurface"></svg></div></div></div><div id="code_panel" class="code_panel_2eFVJ" style="display: none; right: 547px; width: 1431.78px; height: 702px;"><div class="code_panel_drag_btn_BIRVg"></div><div class="code_panel_drag_border_1rc89"></div><div id="sidebar-body-content" class="sidebar_body_content_1Qm0h"><div class="code_panel_banner_3eM2Q"><span class="close_btn_3soeH"></span><span><!-- react-text: 218 -->Codemao-<!-- /react-text --><!-- react-text: 219 -->Blockly<!-- /react-text --></span></div></div></div></div><div id="panel" class="properties_panel_2BKow" style="padding-left: 116px;"><div class="padding_left_3xo1V" style="width: 116px;"></div><div class="properties_left_1YiOr"><div class="properties_name_wrap_3BSEE"><input type="text" maxlength="30" value="编程猫划船" class="name_input_3zYfe"><div class="properties_visibility_wrap_2vxmG vh_center_184GV"><div class="properties_visibility_2TxRs"></div></div></div><div class="input_wrap_1X2Yy"><label>X:</label><input type="text" value="7"></div><div class="input_wrap_1X2Yy"><label>Y:</label><input type="text" value="-238"></div><div class="input_wrap_1X2Yy"><label><span>方向</span><!-- react-text: 236 -->:<!-- /react-text --></label><input type="text" value="0"><!-- react-text: 238 -->°<!-- /react-text --></div><div class="input_wrap_1X2Yy"><label><span>大小</span><!-- react-text: 242 -->:<!-- /react-text --></label><input type="text" value="100"></div><div class="input_wrap_1X2Yy"><label><span>可拖动</span></label><input type="checkbox" class="properties_draggable_1b-bm" value="on"></div><div class="input_wrap_1X2Yy"><div class="rotation_style_kw0CN"><label><span>旋转模式</span><!-- react-text: 252 -->:<!-- /react-text --></label><div class="current_rotation_style_tG9bI"><div class="rotate_icon0_1bER9"></div><svg width="10px" height="4px" viewBox="1063 624 8 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="Triangle-3" stroke="none" fill="#999999" fill-rule="evenodd" points="1067 624 1071 628 1063 628"></polygon></svg></div><div class="rotation_style_selector_dkHz4"><div><div class="rotate_icon2_3WfmZ"></div><span class="hint_3Rxiy"><span>禁止旋转</span></span></div><div><div class="rotate_icon0_1bER9"></div><span class="hint_3Rxiy"><span>自由旋转</span></span></div><div><div class="rotate_icon1_1qHKf"></div><span class="hint_3Rxiy"><span>左右翻转</span></span></div></div></div></div><div class="responsive_menu_2cfdg hide_3pVmT"><div class="icon_arrow_2186r"></div><div class="responsive_menu_container_4LKWN" style="display: none;"><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label>X:</label></div><input type="text" value="7"></div><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label>Y:</label></div><input type="text" value="-238"></div><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label><span>方向</span><!-- react-text: 285 -->:<!-- /react-text --></label></div><input type="text" value="0"></div><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label><span>大小</span><!-- react-text: 291 -->:<!-- /react-text --></label></div><input type="text" value="100"></div><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label><span>可拖动</span><!-- react-text: 297 -->:<!-- /react-text --></label></div><input type="checkbox" class="properties_draggable_1b-bm" value="on"></div><div class="item_wrap_3ciRj hide_3pVmT"><div class="menu_left_wuuY2"><label><span>旋转模式</span><!-- react-text: 303 -->:<!-- /react-text --></label></div><div class="current_rotation_style_tG9bI"><div class="rotate_icon0_1bER9"></div><svg width="10px" height="4px" viewBox="1063 624 8 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="Triangle-3" stroke="none" fill="#999999" fill-rule="evenodd" points="1067 624 1071 628 1063 628"></polygon></svg><div class="rotation_style_selector_dkHz4"><div><div class="rotate_icon2_3WfmZ"></div><span class="hint_3Rxiy"><span>禁止旋转</span></span></div><div><div class="rotate_icon0_1bER9"></div><span class="hint_3Rxiy"><span>自由旋转</span></span></div><div><div class="rotate_icon1_1qHKf"></div><span class="hint_3Rxiy"><span>左右翻转</span></span></div></div></div></div></div></div></div><div class="blockly_panel_33mBn"><div id="redo_undo_wrap" class="redo_undo_wrap_1Ya0n h_flex_9xxhi"><div class="undo_35N8U"><div class="icon_undo_2yV4-"></div><div class="hint_3Rxiy"><span>撤销</span><!-- react-text: 327 -->ctrl+z<!-- /react-text --></div></div><div class="redo_3qrcA"><div class="icon_redo_2xQeg"></div><div class="hint_3Rxiy"><span>重做</span><br><!-- react-text: 333 -->ctrl+shift+z<!-- /react-text --></div></div></div><div class="zoom_out btn_blockly_23VFD"><div class="icon_zoom_out_n4bMP"></div><div class="hint_3Rxiy"><span>缩小</span></div></div><div class="full_extent btn_blockly_23VFD"><div class="icon_full_extent_1oFb1"></div><div class="hint_3Rxiy"><span>原图</span></div></div><div class="zoom_in btn_blockly_23VFD"><div class="icon_zoom_in_3Loh0"></div><div class="hint_3Rxiy"><span>放大</span></div></div><div class="sort btn_blockly_23VFD sort_3TBnB"><div class="icon_sort_2Qt-V"></div><div class="hint_3Rxiy"><span>整理模块</span></div></div></div></div></div><div class="midi-panel_1UkcI"><div class="midi-wrap_3ElIU"><div class="midi-title_9KEVb"></div><div class="midi-scroller_1vKcK"><div class="midi-scroll-block_Egd8v" style="transition: left 0.3s ease-out; left: 227.2px;"><div class="scroll-block-line_1jwZF"></div></div></div><div class="midi-decorate_1eReb"></div><div class="midi-keyboard-wrap_3c-qH"><div class="midi-keyboard_D36C8" style="transition: left 0.3s ease-out; left: -89.6px;"><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A0</div><div class="midi-key-name_2BP3y midi-id_3hvRF">1</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb0</div><div class="midi-key-name_2BP3y midi-id_3hvRF">2</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B0</div><div class="midi-key-name_2BP3y midi-id_3hvRF">3</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">4</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">5</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">6</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">7</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">8</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">9</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">10</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">11</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">12</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">13</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">14</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B1</div><div class="midi-key-name_2BP3y midi-id_3hvRF">15</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">16</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">17</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">18</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">19</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">20</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">21</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">22</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">23</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">24</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">25</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">26</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B2</div><div class="midi-key-name_2BP3y midi-id_3hvRF">27</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">28</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">29</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">30</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">31</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">32</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">33</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">34</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">35</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">36</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">37</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">38</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B3</div><div class="midi-key-name_2BP3y midi-id_3hvRF">39</div></div><div class="midi-key_3GPZs center-c_2pJ-9"><div class="midi-key-name_2BP3y">C4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">40</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">41</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">42</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">43</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">44</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">45</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">46</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">47</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">48</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">49</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">50</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B4</div><div class="midi-key-name_2BP3y midi-id_3hvRF">51</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">52</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">53</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">54</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">55</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">56</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">57</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">58</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">59</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">60</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">61</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">62</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B5</div><div class="midi-key-name_2BP3y midi-id_3hvRF">63</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">64</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">65</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">66</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">67</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">68</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">69</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">70</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">71</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">72</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">73</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">74</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B6</div><div class="midi-key-name_2BP3y midi-id_3hvRF">75</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">76</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Db7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">77</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">D7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">78</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Eb7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">79</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">E7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">80</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">F7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">81</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Gb7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">82</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">G7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">83</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Ab7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">84</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">A7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">85</div></div><div class="midi-key_3GPZs black_calqT"><div class="midi-key-name_2BP3y">Bb7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">86</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">B7</div><div class="midi-key-name_2BP3y midi-id_3hvRF">87</div></div><div class="midi-key_3GPZs"><div class="midi-key-name_2BP3y">C8</div><div class="midi-key-name_2BP3y midi-id_3hvRF">88</div></div></div></div></div><div class="midi-buttons-wrap_1KIe5"><div class="btn-midi-confirm_2Oq26"><span>确定</span></div><div class="btn-midi-cancel_M1vDf"><span>取消</span></div></div></div></div><div class="sidebar_2U7Iw"><div id="sidebar-icon" class="sidebar-icon_1oeth"><div class="style_icon_2GNfb"></div><div class="audio_icon_1oNlm"></div><div class="variable_icon_2ZBZ8"></div></div><div id="sidebar" class="sidebar-wrap_2j-iH"><div class="sidebar_tag_wrap_3JKzo"><div class="sidebar_tag_24vH2"><span>造型</span></div><div class="sidebar_tag_24vH2"><span>声音</span></div><div class="sidebar_tag_24vH2"><span>数据</span></div></div><!-- react-text: 641 --><!-- /react-text --><!-- react-text: 642 --><!-- /react-text --><!-- react-text: 643 --><!-- /react-text --></div></div><!-- react-text: 644 --><!-- /react-text --><div class="sprites_panel_7w-Og"><div class="main_3eBLR"><div class="scene_panel_3dt7z"><div class="current_scene_qy2bD"><i class="scene_img_2JChe"></i><span class="scene_title_TKgjF">屏幕1</span></div><div class="scenes_wrap_t74Pp"><div class="scenes_3C1OU ps ps--theme_default ps--active-x" data-ps-id="65badf4d-683c-b816-330a-3b1b31f7f2c0"><div class="scene_selected_48t-r"><!-- react-text: 688 --><!-- /react-text --><div class="scene_icon_2O1fl"></div><input maxlength="30" value="屏幕1" class="scene_name_input_ij_Wc"></div><div class="ps__scrollbar-x-rail" style="width: 0px; left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div><div class="add_scene_btn_mUyL6"><div class="add_btn_UGu0f"><i class="icon-add_1pfJ5"></i></div></div><div class="close_scene_btn_2xWbo"></div></div></div><div class="sprite_panel_1eTXH"><div id="background-panel" class="background_box_wrap_3-Nuz"><div draggable="false" class="sprite_box_2RR0v"><div draggable="false" class="background-image_1PZ69" style="background-image: url(&quot;https://o44j7l4g3.qnssl.com/kitten/BkSUHFsuf&quot;);"></div><i class="icon_remove_1egRj"></i><i class="icon_edit_1nDHw"></i><span class="sprite_name_3VS5x">背景</span></div></div><div id="sprite-panel" class="sprites_1Wntj"><div class="actor_container_1TcIk"><div class="sprite_box selected sprite_box_selected_1ire8"><img src="./cm_files/rygBISKjdM"><i class="icon_remove icon_remove_1egRj"></i><i class="icon_edit icon_edit_1nDHw"></i><span class="sprite_name sprite_name_3VS5x">编程猫划船</span></div></div></div><div class="control_btns_pAfRk"><div class="control_btn_1OPtv"><i class="music_icon_3Caff"></i></div><div class="control_btn_1OPtv"><i class="painter_icon_1Ye1u"></i></div><div class="control_btn_1OPtv"><i class="marterial_icon_3b5SI"></i></div></div></div><!-- react-text: 677 --><!-- /react-text --></div></div><!-- react-empty: 678 --><div class="painter_3ZwEp" style="visibility: hidden;"></div><div id="music-painter" class="music-painter_Se_Xv" style="visibility: hidden;"></div></div></div>
+<script type="text/javascript" src="./cm_files/convnet.js"></script><script type="text/javascript" src="./cm_files/blockly_compressed.js"></script><script type="text/javascript" src="./cm_files/blocks_compressed.js"></script><script type="text/javascript" src="./cm_files/javascript_compressed.js"></script><script type="text/javascript" src="./cm_files/python_compressed.js"></script><script type="text/javascript" src="./cm_files/runtime.eba48aa3dfa85ea35dc0.js"></script><script type="text/javascript" src="./cm_files/vendor.d3009366f30886e50a95.js"></script><script type="text/javascript" src="./cm_files/kitten.26b465d6cc543d66ebf3.js"></script><script type="text/javascript" src="./cm_files/tingyun.js"></script>
+<!-- FIXME: Add cordova when robot-->
+
+<div class="blocklyWidgetDiv" style="direction: ltr; display: none; height: 326px;"></div><div class="blocklyTooltipDiv"></div></body></html>

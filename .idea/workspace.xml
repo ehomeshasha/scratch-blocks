@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7835d4ac-5726-4c4d-b82f-043c233b7325" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/scratch-blocks.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/0.4b4ba816631f0c0a3686.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/analytics.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/blockly_compressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/blocks_compressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/convnet.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/default_display_0d3e4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/hardware_leidianhou_2c765.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/javascript_compressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/kitten.26b465d6cc543d66ebf3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/kitten_49394.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/perfect-scrollbar.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/python_compressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/runtime.eba48aa3dfa85ea35dc0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/rygBISKjdM" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/tingyun.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/vds.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/a/cm_files/vendor.d3009366f30886e50a95.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blockly_compressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blockly_uncompressed.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_common_origin/colour.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_common_origin/math.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_common_origin/text.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical/python_lists.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/control.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/default_toolbox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/event.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/looks.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/motion.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/operators.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/pen.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/procedures.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/python_lists.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/sensing.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/sound.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/blocks_vertical_origin/vertical_extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/build_blockly.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/build_common.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block_drag_surface.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block_dragger.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block_render_svg_horizontal.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block_render_svg_vertical.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/block_svg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/blockly.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/blocks.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/bubble.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/colours.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/comment.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/connection.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/connection_db.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/constants.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/contextmenu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/css.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/data_category.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/dragged_connection_manager.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/dropdowndiv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/events.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_angle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_checkbox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_colour.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_colour_slider.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_date.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_dropdown.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_iconmenu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_image.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_label.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_label_serializable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_number.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_numberdropdown.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_textdropdown.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_textinput.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_textinput_removable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_variable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_variable_getter.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/field_vertical_separator.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/flyout_base.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/flyout_button.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/flyout_dragger.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/flyout_horizontal.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/flyout_vertical.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/generator.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/gesture.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/grid.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/icon.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/inject.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/input.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/insertion_marker_manager.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/msg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/mutator.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/names.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/options.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/procedures.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/rendered_connection.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/scrollbar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/toolbox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/tooltip.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/touch.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/trashcan.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/ui_menu_utils.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/utils.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/variable_map.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/variable_model.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/variables.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/warning.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/widgetdiv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/workspace.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/workspace_audio.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/workspace_drag_surface_svg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/workspace_dragger.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/workspace_svg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/xml.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core_origin/zoom_controls.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/generators_origin/dart.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/generators_origin/javascript.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/generators_origin/lua.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/generators_origin/php.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/generators_origin/python.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/blocks_vertical/default_toolbox.js" afterPath="$PROJECT_DIR$/blocks_vertical/default_toolbox.js" />
+      <change beforePath="$PROJECT_DIR$/blocks_vertical/motion.js" afterPath="$PROJECT_DIR$/blocks_vertical/motion.js" />
+      <change beforePath="$PROJECT_DIR$/generators/python.js" afterPath="$PROJECT_DIR$/generators/python.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="blocks_compressed.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a/cm_files/blocks_compressed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="1102" column="29" lean-forward="false" selection-start-line="1102" selection-start-column="18" selection-end-line="1102" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="python_compressed.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a/cm_files/python_compressed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="409" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blocks_vertical_origin/event.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="844">
+              <caret line="273" column="23" lean-forward="true" selection-start-line="273" selection-start-column="23" selection-end-line="273" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default_toolbox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blocks_vertical/default_toolbox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="34" />
+              <folding>
+                <marker date="1521698250032" expanded="true" signature="906:919" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="motion.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blocks_vertical/motion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="python.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generators/python.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="343" column="0" lean-forward="true" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/block.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="929" column="0" lean-forward="false" selection-start-line="929" selection-start-column="0" selection-end-line="929" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/generator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javascript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generators/javascript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="python.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generators_origin/python.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Blockly.Msg</find>
+      <find>BKY_LISTS_CREATE_EMPTY_TITLE</find>
+      <find>HUE</find>
+      <find>sessionStorage</find>
+      <find>to</find>
+      <find>lists_create_empty</find>
+      <find>下载</find>
+      <find>.下载</find>
+      <find>BKY_COLOUR_HUE</find>
+      <find>'use strict';</find>
+      <find>Blockly\.Blocks\.([a-zA-Z0-9_]+)\s+=\s+\{\};</find>
+      <find>colours_event</find>
+      <find>initModel</find>
+      <find>svg</find>
+      <find>block_render_svg_</find>
+      <find>when_event</find>
+      <find>START_HAT_PATH</find>
+      <find>renderDraw_</find>
+      <find>svgPath_</find>
+      <find>renderDrawTop_</find>
+      <find>Blockly.Blocks.</find>
+      <find>event</find>
+      <find>DEGREES</find>
+      <find>··</find>
+      <find>Blockly.Extensions.register</find>
+      <find>colours_motion</find>
+      <find>controls_if_if</find>
+      <find>Blockly.Extensions.register(</find>
+      <find>math_number</find>
+      <find>motion_movesteps</find>
+    </findStrings>
+    <dirStrings>
+      <dir>D:\scratch\scratch-blocks\a</dir>
+      <dir>D:\scratch\scratch-blocks\blocks_common</dir>
+      <dir>D:\scratch\scratch-blocks\blocks_common_origin</dir>
+      <dir>D:\scratch\scratch-blocks\blocks_horizontal</dir>
+      <dir>D:\scratch\scratch-blocks\blocks_vertical</dir>
+      <dir>D:\scratch\scratch-blocks</dir>
+      <dir>D:\scratch\scratch-blocks\core</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/core/workspace.js" />
+        <option value="$PROJECT_DIR$/core/gesture.js" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/core/generator.js" />
+        <option value="$PROJECT_DIR$/msg/messages.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/custom.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/python_list.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/python_lists.js" />
+        <option value="$PROJECT_DIR$/a/cm.html" />
+        <option value="$PROJECT_DIR$/a/cm_files/blockly_compressed.js" />
+        <option value="$PROJECT_DIR$/a/cm_files/javascript_compressed.js" />
+        <option value="$PROJECT_DIR$/generators/javascript.js" />
+        <option value="$PROJECT_DIR$/tests/playground.html" />
+        <option value="$PROJECT_DIR$/tests/vertical_playground.html" />
+        <option value="$PROJECT_DIR$/blocks_common/default_toolbox.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/event.js" />
+        <option value="$PROJECT_DIR$/core/block_render_svg_vertical.js" />
+        <option value="$PROJECT_DIR$/a/cm_files/blocks_compressed.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/default_toolbox.js" />
+        <option value="$PROJECT_DIR$/blocks_vertical/motion.js" />
+        <option value="$PROJECT_DIR$/a/cm_files/python_compressed.js" />
+        <option value="$PROJECT_DIR$/generators/python.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="a" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="a" type="462c0819:PsiDirectoryNode" />
+              <item name="cm_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks_common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks_common_origin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks_vertical" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="generators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="generators_origin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scratch-blocks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scratch-blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scratch-gui" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="D:\scratch\scratch-blocks\node_modules\eslint" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\scratch\scratch-blocks" />
+      <recent name="D:\scratch\scratch-blocks\blocks_vertical" />
+      <recent name="D:\scratch\scratch-blocks\blocks_common" />
+      <recent name="D:\scratch\scratch-blocks\tests" />
+      <recent name="D:\scratch\scratch-blocks\a" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7835d4ac-5726-4c4d-b82f-043c233b7325" name="Default" comment="" />
+      <created>1521014315604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521014315604</updated>
+      <workItem from="1521014317829" duration="2410000" />
+      <workItem from="1521017168595" duration="456000" />
+      <workItem from="1521017649276" duration="1473000" />
+      <workItem from="1521020096804" duration="3861000" />
+      <workItem from="1521089378268" duration="8000" />
+      <workItem from="1521089395932" duration="1710000" />
+      <workItem from="1521109335402" duration="595000" />
+      <workItem from="1521110444338" duration="393000" />
+      <workItem from="1521110870162" duration="659000" />
+      <workItem from="1521166308610" duration="621000" />
+      <workItem from="1521424695589" duration="12316000" />
+      <workItem from="1521508339218" duration="250000" />
+      <workItem from="1521508607250" duration="3251000" />
+      <workItem from="1521524289542" duration="5533000" />
+      <workItem from="1521530824451" duration="164000" />
+      <workItem from="1521531037078" duration="9745000" />
+      <workItem from="1521596838457" duration="11926000" />
+      <workItem from="1521621069846" duration="8576000" />
+      <workItem from="1521681332855" duration="12477000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76424000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30558482" sideWeight="0.4935065" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49789253" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18229716" sideWeight="0.5064935" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18882681" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dist/vertical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="1391" column="10883" lean-forward="false" selection-start-line="1391" selection-start-column="10882" selection-end-line="1391" selection-end-column="10883" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_vertical_python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/procedures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_common/math.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/custom.js" />
+    <entry file="file://$PROJECT_DIR$/blockly_msg.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="100" column="38" lean-forward="false" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a/codemao_files/vds.js.下载" />
+    <entry file="file://$PROJECT_DIR$/a/codemao_files/javascript_compressed.js.下载" />
+    <entry file="file://$PROJECT_DIR$/a/codemao.html" />
+    <entry file="file://$PROJECT_DIR$/a/cm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="946" column="707" lean-forward="false" selection-start-line="946" selection-start-column="707" selection-end-line="946" selection-end-column="707" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/js/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generators_origin/lua.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a/cm_files/javascript_compressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a/cm_files/blockly_compressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="19222" column="3" lean-forward="true" selection-start-line="19222" selection-start-column="3" selection-end-line="19222" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_common/default_toolbox.js" />
+    <entry file="file://$PROJECT_DIR$/blocks_common/colour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/web/vertical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="1403" column="350" lean-forward="false" selection-start-line="1403" selection-start-column="350" selection-end-line="1403" selection-end-column="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/playground.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="109" column="19" lean-forward="false" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_common_origin/math.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical_origin/pen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/python_lists.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/vertical_playground.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_blockly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block_render_svg_horizontal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core_origin/css.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23121">
+          <caret line="1114" column="4" lean-forward="false" selection-start-line="1114" selection-start-column="4" selection-end-line="1114" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="3638" column="4" lean-forward="false" selection-start-line="3638" selection-start-column="4" selection-end-line="3638" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5691">
+          <caret line="289" column="0" lean-forward="false" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block_svg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="161" column="55" lean-forward="false" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/warning.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block_render_svg_vertical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="302" column="34" lean-forward="false" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/block.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="1377" column="0" lean-forward="false" selection-start-line="1377" selection-start-column="0" selection-end-line="1377" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="1380" column="0" lean-forward="false" selection-start-line="1380" selection-start-column="0" selection-end-line="1380" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/vertical_extensions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="247" column="53" lean-forward="false" selection-start-line="247" selection-start-column="53" selection-end-line="247" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1743">
+          <caret line="113" column="19" lean-forward="true" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generators_origin/python.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generators/javascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="929" column="0" lean-forward="false" selection-start-line="929" selection-start-column="0" selection-end-line="929" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical_origin/event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="844">
+          <caret line="273" column="23" lean-forward="true" selection-start-line="273" selection-start-column="23" selection-end-line="273" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/motion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks_vertical/default_toolbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="34" />
+          <folding>
+            <marker date="1521698250032" expanded="true" signature="906:919" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a/cm_files/blocks_compressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1102" column="29" lean-forward="false" selection-start-line="1102" selection-start-column="18" selection-end-line="1102" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a/cm_files/python_compressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="409" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generators/python.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="343" column="0" lean-forward="true" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

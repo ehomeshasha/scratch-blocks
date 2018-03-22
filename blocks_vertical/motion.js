@@ -35,7 +35,7 @@ Blockly.Blocks['motion_movesteps'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "move %1 steps",
+      "message0": "移动 %1 步",
       "args0": [
         {
           "type": "input_value",
@@ -55,7 +55,7 @@ Blockly.Blocks['motion_turnright'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "turn %1 %2 degrees",
+      "message0": "向右旋转 %1 %2 度",
       "args0": [
         {
           "type": "field_image",
@@ -81,7 +81,7 @@ Blockly.Blocks['motion_turnleft'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "turn %1 %2 degrees",
+      "message0": "向左旋转 %1 %2 度",
       "args0": [
         {
           "type": "field_image",
@@ -107,7 +107,7 @@ Blockly.Blocks['motion_pointindirection'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "point in direction %1",
+      "message0": "面向 %1 方向",
       "args0": [
         {
           "type": "input_value",
