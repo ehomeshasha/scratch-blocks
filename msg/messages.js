@@ -1239,6 +1239,9 @@ Blockly.Msg.PROCEDURES_IFRETURN_HELPURL = 'http://c2.com/cgi/wiki?GuardClause';
 Blockly.Msg.PROCEDURES_IFRETURN_WARNING = 'Warning: This block may be used only within a function definition.';
 
 
+//from codemao
+
+
 Blockly.Msg.ADD_COMMENT="添加注释";
 Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE="不能删除变量“%1”，因为它是功能“%2”定义的一部分";
 Blockly.Msg.CHANGE_VALUE_TITLE="更改值：";

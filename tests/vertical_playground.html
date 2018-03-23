@@ -25,8 +25,70 @@
     <script src="../blocks_vertical/data.js"></script>
     <script src="../blocks_vertical/extensions.js"></script>
 
+    <script src="../blocks_vertical/blockpy_corgis.js"></script>
+    <script src="../blocks_vertical/blockpy_dicts.js"></script>
+    <script src="../blocks_vertical/blockpy_lists.js"></script>
+    <script src="../blocks_vertical/blockpy_logic.js"></script>
+    <script src="../blocks_vertical/blockpy_loops.js"></script>
+    <script src="../blocks_vertical/blockpy_plot.js"></script>
+    <script src="../blocks_vertical/blockpy_utility.js"></script>
+    <script src="../blocks_vertical/blockpy_variables.js"></script>
+
+
+
     <script src="../blocks_vertical/default_toolbox.js"></script>
     <script src="../generators/python.js"></script>
+
+
+
+
+    <!-- Skulpt -->
+    <script type="text/javascript" src="../skulpt/dist/skulpt.min.js"></script>
+    <script type="text/javascript" src="../skulpt/dist/skulpt-stdlib.js"></script>
+
+    <!-- Source Code -->
+    <script type="text/javascript" src="../src/utilities.js"></script>
+    <script type="text/javascript" src="../src/python_errors.js"></script>
+    <script type="text/javascript" src="../src/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../src/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../src/pytifa.js"></script>
+    <script type="text/javascript" src="../src/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../src/abstract_interpreter_tests.js"></script>
+    <script type="text/javascript" src="../src/python_to_blockly.js"></script>
+    <!--<script type="text/javascript" src="../src/imported.js"></script>-->
+    <script type="text/javascript" src="../src/blockly_blocks/class.js"></script>
+    <script type="text/javascript" src="../src/blockly_blocks/comment.js"></script>
+    <script type="text/javascript" src="../src/blockly_blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../src/blockly_blocks/dict.js"></script>
+    <!--<script type="text/javascript" src="../src/blockly_blocks/if.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/io.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/lists.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/sets.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/loops.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/parking.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/tuple.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/turtles.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/text.js"></script>-->
+    <!--<script type="text/javascript" src="../src/blockly_blocks/plots.js"></script>-->
+    <!--<script type="text/javascript" src="../src/dialog.js"></script>-->
+    <!--<script type="text/javascript" src="../src/storage.js"></script>-->
+    <!--<script type="text/javascript" src="../src/printer.js"></script>-->
+    <!--<script type="text/javascript" src="../src/interface.js"></script>-->
+    <!--<script type="text/javascript" src="../src/server.js"></script>-->
+    <!--<script type="text/javascript" src="../src/english.js"></script>-->
+    <!--<script type="text/javascript" src="../src/corgis.js"></script>-->
+    <!--<script type="text/javascript" src="../src/history.js"></script>-->
+    <!--<script type="text/javascript" src="../src/presentation.js"></script>-->
+    <!--<script type="text/javascript" src="../src/editor.js"></script>-->
+    <!--<script type="text/javascript" src="../src/feedback.js"></script>-->
+    <!--<script type="text/javascript" src="../src/toolbar.js"></script>-->
+    <!--<script type="text/javascript" src="../src/sk_mod_instructor_extended.js"></script>-->
+    <!--<script type="text/javascript" src="../src/sk_mod_instructor.js"></script>-->
+    <!--<script type="text/javascript" src="../src/engine.js"></script>-->
+    <!--<script type="text/javascript" src="../src/main.js"></script>-->
+
+
+
 
     <script>
       'use strict';
@@ -90,6 +152,8 @@
           }
         });
 
+
+
         if (sessionStorage) {
           // Restore previously displayed text.
           var text = sessionStorage.getItem('textarea');
@@ -137,9 +201,86 @@
         taChange();
       }
 
+      function setBlocksFromXml(xml) {
+        Blockly.Xml.domToWorkspace(xml, workspace);
+      }
+
+      function toBlock(lang) {
+        var output = document.getElementById('importExport');
+        var code = output.value;
+        var python_code = code;
+        //alert(code);
+        var converter = new PythonToBlocks();
+
+        var xml_code = "";
+        if (python_code !== '' && python_code !== undefined && python_code.trim().charAt(0) !== '<') {
+          var result = converter.convertSource(python_code);
+          xml_code = result.xml;
+          // window.clearTimeout(this.blocksFailedTimeout);
+          if (result.error !== null) {
+            console.log(result.error);
+            // this.blocksFailed = result.error;
+            // var editor = this;
+            // this.blocksFailedTimeout = window.setTimeout(function() {
+            //   if (editor.main.model.settings.editor() != 'Text') {
+            //     editor.showConversionError();
+            //   }
+            // }, 500)
+          } else {
+            // this.blocksFailed = false;
+            // this.main.components.feedback.clearEditorErrors();
+          }
+        }
+
+
+
+        var error_code = converter.convertSourceToCodeBlock(python_code);
+        var errorXml = Blockly.Xml.textToDom(error_code);
+
+        document.getElementById('resultXml').value = xml_code;
+        document.getElementById('errorXml').value = error_code;
+
+        // console.log(xml_code);
+        // console.log(error_code);
+
+        workspace.clear();
+
+        if (python_code == '' || python_code == undefined || python_code.trim() == '') {
+          workspace.clear();
+        } else if (xml_code !== '' && xml_code !== undefined) {
+          var blocklyXml = Blockly.Xml.textToDom(xml_code);
+          try {
+            setBlocksFromXml(blocklyXml);
+          } catch (e) {
+            console.error(e);
+            setBlocksFromXml(errorXml);
+          }
+        } else {
+          setBlocksFromXml(errorXml);
+        }
+        // Blockly.Events.disable();
+        // Parsons shuffling
+        // if (this.main.model.assignment.parsons()) {
+        //   this.blockly.shuffle();
+        // } else {
+        //   this.blockly.align();
+        // }
+
+        // workspace.align();
+
+        // Blockly.Events.enable();
+        // if (this.previousLine !== null) {
+        //   this.refreshBlockHighlight(this.previousLine);
+        // }
+
+      }
+
+
       // Disable the "Import from XML" button if the XML is invalid.
       // Preserve text between page reloads.
       function taChange() {
+        toBlock('Python');
+
         var textarea = document.getElementById('importExport');
         if (sessionStorage) {
           sessionStorage.setItem('textarea', textarea.value)
@@ -493,9 +634,14 @@
       <input type="button" value="Import from XML" onclick="fromXml()" id="import">
       <br>
       <input type="button" value="To Python" onclick="toCode('Python')">
+      <input type="button" value="To Block" onclick="toBlock('Python')">
       <br>
       <textarea id="importExport" style="width: 26%; height: 12em"
         onchange="taChange();" onkeyup="taChange()"></textarea>
+      <br>
+      <textarea id="resultXml" style="width: 26%; height: 12em"></textarea>
+      <br>
+      <textarea id="errorXml" style="width: 26%; height: 12em"></textarea>
     </p>
 
     <hr>
