@@ -218,7 +218,7 @@ Blockly.Blocks['text_print_multiple'] = {
                 i++;
             }
         }
-    
+
         // Rebuild block.
         if (this.itemCount_ == 0) {
             this.appendDummyInput('EMPTY')
@@ -305,10 +305,10 @@ Blockly.Blocks['function_call'] = {
         var containerBlock = Blockly.Block.obtain(workspace,
                                  'function_call_container');
         containerBlock.initSvg();
-        
+
         containerBlock.setFieldValue(this.hasStatements_ ? 'TRUE' : 'FALSE',
                                    'RETURN');
-        
+
         var connection = containerBlock.getInput('STACK').connection;
         for (var x = 0; x < this.itemCount_; x++) {
           var itemBlock = Blockly.Block.obtain(workspace, 'function_call_item');
@@ -349,9 +349,9 @@ Blockly.Blocks['function_call'] = {
             i++;
         }
         this.itemCount_ = i;
-        
+
         this.hasReturn_ = containerBlock.getFieldValue("RETURN") === "TRUE";
-        
+
         this.updateShape_();
         // Reconnect any child blocks.
         for (var i = 0; i < this.itemCount_; i++) {
@@ -393,12 +393,12 @@ Blockly.Blocks['function_call'] = {
                 i++;
             }
         }
-    
+
         // Rebuild block.
         for (var i = 0; i < this.itemCount_; i++) {
             var input = this.appendValueInput('ARGUMENT' + i);
         }
-        
+
         // Set whether returns anything
         this.setReturn(this.hasReturn_);
     }

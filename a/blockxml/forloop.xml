@@ -1,0 +1,25 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_forEach" line_number="1" inline="true">
+    <value name="LIST">
+      <block type="procedures_callreturn" line_number="1" inline="true">
+        <mutation name="range">
+          <arg name="">
+            <block type="math_number" line_number="1">
+              <field name="NUM">5</field>
+            </block>
+          </arg>
+        </mutation>
+        <value name="ARG0">
+          <block type="math_number" line_number="1">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="VAR">
+      <block type="variables_get" line_number="1">
+        <field name="VAR">i</field>
+      </block>
+    </value>
+  </block>
+</xml>
